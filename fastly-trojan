@@ -2,7 +2,8 @@ trojan://trojan@43.249.73.255:443?path=%2F%3Fed%3D2560&security=tls&alpn=h2,http
 trojan://trojan@43.249.74.255:443?path=%2F%3Fed%3D2560&security=tls&alpn=h2,http/1.1&host=kazablanka.com&fp=randomized&type=ws&sni=fastly.com#Suevpnx
 trojan://trojan@140.248.66.255:443?path=%2F%3Fed%3D2560&security=tls&alpn=h2,http/1.1&host=kazablanka.com&fp=randomized&type=ws&sni=fastly.com#Suevpnx
 trojan://trojan@103.245.224.255:443?path=%2F%3Fed%3D2560&security=tls&alpn=h2,http/1.1&host=kazablanka.com&fp=randomized&type=ws&sni=fastly.com#Suevpnx
-trojan://trojan@104.156.82.255:443?path=%2F%3Fed%3D2560&security=tls&alpn=h2,http/1.1&host=kazablanka.com&fp=randomized&type=ws&sni=fastly.com#Suevpnxtrojan://trojan@140.248.66.255:443?path=%2F%3Fed%3D2560&security=tls&alpn=h2,http/1.1&host=kazablanka.com&fp=randomized&type=ws&sni=fastly.com#Suevpnx
+trojan://trojan@104.156.82.255:443?path=%2F%3Fed%3D2560&security=tls&alpn=h2,http/1.1&host=kazablanka.com&fp=randomized&type=ws&sni=fastly.com#Suevpnx
+trojan://trojan@140.248.66.255:443?path=%2F%3Fed%3D2560&security=tls&alpn=h2,http/1.1&host=kazablanka.com&fp=randomized&type=ws&sni=fastly.com#Suevpnx
 trojan://trojan@140.248.128.1:443?path=%2F%3Fed%3D2560&security=tls&alpn=h2,http/1.1&host=kazablanka.com&fp=randomized&type=ws&sni=fastly.com#Suevpnx
 trojan://trojan@140.248.128.2:443?path=%2F%3Fed%3D2560&security=tls&alpn=h2,http/1.1&host=kazablanka.com&fp=randomized&type=ws&sni=fastly.com#Suevpnx
 trojan://trojan@140.248.128.7:443?path=%2F%3Fed%3D2560&security=tls&alpn=h2,http/1.1&host=kazablanka.com&fp=randomized&type=ws&sni=fastly.com#Suevpnx
