@@ -4,3 +4,5 @@ vless://76652a22-93f7-41f1-a79e-a4b964d70522@199.232.0.177:443?path=%2FrJfOxqhy9
 vless://76652a22-93f7-41f1-a79e-a4b964d70522@104.156.92.255:443?path=%2FrJfOxqhy9TVNvkVn%3Fed%3D2560&security=tls&encryption=none&alpn=h2,http/1.1&host=mobile.siteglobal.com&fp=randomized&type=ws&sni=mobile.siteglobal.com#Suevpnx-Fastly
 vless://76652a22-93f7-41f1-a79e-a4b964d70522@199.232.32.140:443?path=%2FrJfOxqhy9TVNvkVn%3Fed%3D2560&security=tls&encryption=none&alpn=h2,http/1.1&host=mobile.siteglobal.com&fp=randomized&type=ws&sni=mobile.siteglobal.com#Suevpnx-Fastly
 vless://76652a22-93f7-41f1-a79e-a4b964d70522@199.232.5.144:443?path=%2FrJfOxqhy9TVNvkVn%3Fed%3D2560&security=tls&encryption=none&alpn=h2,http/1.1&host=mobile.siteglobal.com&fp=randomized&type=ws&sni=fastly.com#Suevpnx-Fastly
+trojan://trojan@43.249.73.255:443?security=tls&sni=kazablanka.com&alpn=h2%2Chttp%2F1.1&fp=randomized&allowInsecure=1&type=ws&host=kazablanka.com&path=%2F%3Fed%3D2560#Suevpnx
+trojan://trojan@43.249.74.255:443?security=tls&sni=kazablanka.com&alpn=h2%2Chttp%2F1.1&fp=randomized&allowInsecure=1&type=ws&host=kazablanka.com&path=%2F%3Fed%3D2560#Suevpnx
