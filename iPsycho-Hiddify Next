@@ -1,2 +1,0 @@
-warp://[2606:4700:d0::13a7:b8f5:127e:4b9d]:943?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#iPv6&&detour=warp://188.114.96.236:890?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m3#iPv4
-warp://[2606:4700:d0::4c9:e7a6:a319:43c4]:2506?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#iPv6&&detour=warp://188.114.97.110:2371?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m3#iPv4
