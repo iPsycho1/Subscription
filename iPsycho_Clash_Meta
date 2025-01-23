@@ -1,6 +1,6 @@
 # 生成地址：v2rayse.com
 # 模版名称：defaultName
-# 生成时间：2025-01-23 13:58:33
+# 生成时间：2025-01-23 14:04:37
 # 不要随意改变关键字，否则会导致出错
 # acl4SSR规则
 # 去广告：支持
@@ -58,126 +58,7 @@ tun:
     - 1.1.1.1
     - 1.0.0.1
 proxies:
-  - name: "💦 1 - VLESS - Domain : 2096"
-    port: 2096
-    server: sue-support.pages.dev
-    type: vless
-    network: ws
-    tls: true
-    udp: true
-    servername: sUE-SUpPorT.PAges.dEV
-    skip-cert-verify: true
-    ws-opts:
-      path: /f9s8jSBeX8npfF6G/MTYyLjE1OC4yMDEuODI=?ed=2560
-      headers:
-        host: sue-support.pages.dev
-    alpn:
-      - h2,http/1.1
-    uuid: 856ed5bd-c49f-407f-9ce6-4340e15fba68
-    client-fingerprint: randomized
-  - name: "💦 2 - VLESS - Domain : 2096"
-    port: 2096
-    server: www.speedtest.net
-    type: vless
-    network: ws
-    tls: true
-    udp: true
-    servername: Sue-suppoRT.pAgeS.dEV
-    skip-cert-verify: true
-    ws-opts:
-      path: /jFapI0BLfN3cT9v4/MTYyLjE1OC4yMDEuODI=?ed=2560
-      headers:
-        host: sue-support.pages.dev
-    alpn:
-      - h2,http/1.1
-    uuid: 856ed5bd-c49f-407f-9ce6-4340e15fba68
-    client-fingerprint: randomized
-  - name: "💦 3 - VLESS - IPv4 : 2096"
-    port: 2096
-    server: 188.114.96.3
-    type: vless
-    network: ws
-    tls: true
-    udp: true
-    servername: sUE-SuppORt.pAGeS.DeV
-    skip-cert-verify: true
-    ws-opts:
-      path: /v0bKhj5yqIDXOTTS/MTYyLjE1OC4yMDEuODI=?ed=2560
-      headers:
-        host: sue-support.pages.dev
-    alpn:
-      - h2,http/1.1
-    uuid: 856ed5bd-c49f-407f-9ce6-4340e15fba68
-    client-fingerprint: randomized
-  - name: "💦 4 - VLESS - IPv4 : 2096"
-    port: 2096
-    server: 188.114.97.3
-    type: vless
-    network: ws
-    tls: true
-    udp: true
-    servername: sue-sUPPort.pagES.deV
-    skip-cert-verify: true
-    ws-opts:
-      path: /F2w2vMrWuABAwxQb/MTYyLjE1OC4yMDEuODI=?ed=2560
-      headers:
-        host: sue-support.pages.dev
-    alpn:
-      - h2,http/1.1
-    uuid: 856ed5bd-c49f-407f-9ce6-4340e15fba68
-    client-fingerprint: randomized
-  - name: "💦 5 - VLESS - IPv6 : 2096"
-    port: 2096
-    server: 2a06:98c1:3121::3
-    type: vless
-    network: ws
-    tls: true
-    udp: true
-    servername: SuE-sUPport.PAGEs.Dev
-    skip-cert-verify: true
-    ws-opts:
-      path: /V9LQsZ95UFuGheqY/MTYyLjE1OC4yMDEuODI=?ed=2560
-      headers:
-        host: sue-support.pages.dev
-    alpn:
-      - h2,http/1.1
-    uuid: 856ed5bd-c49f-407f-9ce6-4340e15fba68
-    client-fingerprint: randomized
-  - name: "💦 6 - VLESS - IPv6 : 2096"
-    port: 2096
-    server: 2a06:98c1:3120::3
-    type: vless
-    network: ws
-    tls: true
-    udp: true
-    servername: SUe-suPPOrT.pagEs.dEV
-    skip-cert-verify: true
-    ws-opts:
-      path: /4Ol4eZfyNyw1bMeI/MTYyLjE1OC4yMDEuODI=?ed=2560
-      headers:
-        host: sue-support.pages.dev
-    alpn:
-      - h2,http/1.1
-    uuid: 856ed5bd-c49f-407f-9ce6-4340e15fba68
-    client-fingerprint: randomized
-  - name: "💦 7 - VLESS - Clean IP : 2096"
-    port: 2096
-    server: 45.80.108.1
-    type: vless
-    network: ws
-    tls: true
-    udp: true
-    servername: suE-sUpPort.PAGES.DeV
-    skip-cert-verify: true
-    ws-opts:
-      path: /kFvZXtj3AJKzyJr7/MTYyLjE1OC4yMDEuODI=?ed=2560
-      headers:
-        host: sue-support.pages.dev
-    alpn:
-      - h2,http/1.1
-    uuid: 856ed5bd-c49f-407f-9ce6-4340e15fba68
-    client-fingerprint: randomized
-  - name: "💦 1 - Trojan - Domain : 2096"
+  - name: "💦 1 - Trojan - Domain : 2096_1"
     port: 2096
     server: sue-support.pages.dev
     type: trojan
@@ -193,7 +74,7 @@ proxies:
     alpn:
       - h2,http/1.1
     client-fingerprint: randomized
-  - name: "💦 2 - Trojan - Domain : 2096"
+  - name: "💦 2 - Trojan - Domain : 2096_1"
     port: 2096
     server: www.speedtest.net
     type: trojan
@@ -209,7 +90,7 @@ proxies:
     alpn:
       - h2,http/1.1
     client-fingerprint: randomized
-  - name: "💦 3 - Trojan - IPv4 : 2096"
+  - name: "💦 3 - Trojan - IPv4 : 2096_1"
     port: 2096
     server: 188.114.96.3
     type: trojan
@@ -225,7 +106,7 @@ proxies:
     alpn:
       - h2,http/1.1
     client-fingerprint: randomized
-  - name: "💦 4 - Trojan - IPv4 : 2096"
+  - name: "💦 4 - Trojan - IPv4 : 2096_1"
     port: 2096
     server: 188.114.97.3
     type: trojan
@@ -241,7 +122,7 @@ proxies:
     alpn:
       - h2,http/1.1
     client-fingerprint: randomized
-  - name: "💦 5 - Trojan - IPv6 : 2096"
+  - name: "💦 5 - Trojan - IPv6 : 2096_1"
     port: 2096
     server: "[2a06:98c1:3121::3]"
     type: trojan
@@ -257,7 +138,7 @@ proxies:
     alpn:
       - h2,http/1.1
     client-fingerprint: randomized
-  - name: "💦 6 - Trojan - IPv6 : 2096"
+  - name: "💦 6 - Trojan - IPv6 : 2096_1"
     port: 2096
     server: "[2a06:98c1:3120::3]"
     type: trojan
@@ -273,7 +154,7 @@ proxies:
     alpn:
       - h2,http/1.1
     client-fingerprint: randomized
-  - name: "💦 7 - Trojan - Clean IP : 2096"
+  - name: "💦 7 - Trojan - Clean IP : 2096_1"
     port: 2096
     server: 45.80.108.1
     type: trojan
@@ -289,17 +170,7 @@ proxies:
     alpn:
       - h2,http/1.1
     client-fingerprint: randomized
-  - name: Vless_France 🇨🇵
-    port: 8080
-    server: x1fr-amazon.thanks-devefun-team-omg-i-needed-free-c-im-sure-you-are-the-bes.link
-    type: vless
-    network: ws
-    udp: true
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    uuid: 30f31d96-b378-422d-b9f5-563c7fcec394
-  - name: Trojan_France 🇨🇵
+  - name: Trojan_France 🇨🇵_1
     port: 1935
     server: x1fr-amazon.devefun.net
     type: trojan
@@ -311,17 +182,7 @@ proxies:
     alpn:
       - h3,h2,http/1.1
     client-fingerprint: chrome
-  - name: Vless_Spain 🇪🇸
-    port: 8080
-    server: x14spain.thanks-devefun-team-omg-i-needed-free-c-im-sure-you-are-the-bes.link
-    type: vless
-    network: ws
-    udp: true
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    uuid: b2ff9b13-adc2-4c06-bc09-32accc3ad7e5
-  - name: Trojan_Spain 🇪🇸
+  - name: Trojan_Spain 🇪🇸_1
     port: 1935
     server: x14spain.devefun.net
     type: trojan
@@ -333,17 +194,7 @@ proxies:
     alpn:
       - h3,h2,http/1.1
     client-fingerprint: chrome
-  - name: Vless_Germany 🇩🇪
-    port: 8080
-    server: x2ger-amazon.thanks-devefun-team-omg-i-needed-free-c-im-sure-you-are-the-bes.link
-    type: vless
-    network: ws
-    udp: true
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    uuid: 95199596-659c-47fa-bde5-6ecbc7f62ae3
-  - name: Trojan_Germany 🇩🇪
+  - name: Trojan_Germany 🇩🇪_1
     port: 1935
     server: x2ger-amazon.devefun.net
     type: trojan
@@ -354,17 +205,7 @@ proxies:
     skip-cert-verify: true
     alpn:
       - h3,h2,http/1.1
-  - name: Vless_Sweden 🇸🇪
-    port: 8080
-    server: x2swe-amazon.thanks-devefun-team-omg-i-needed-free-c-im-sure-you-are-the-bes.link
-    type: vless
-    network: ws
-    udp: true
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    uuid: b1f200fe-7452-4001-bc91-829dfbbcf631
-  - name: Trojan_Sweden 🇸🇪
+  - name: Trojan_Sweden 🇸🇪_1
     port: 1935
     server: x2swe-amazon.devefun.net
     type: trojan
@@ -375,17 +216,7 @@ proxies:
     skip-cert-verify: true
     alpn:
       - h3,h2,http/1.1
-  - name: Vless_United States 🇺🇲
-    port: 8080
-    server: x1us-amazon.thanks-devefun-team-omg-i-needed-free-c-im-sure-you-are-the-bes.link
-    type: vless
-    network: ws
-    udp: true
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    uuid: dc090dc6-b24c-45f7-8645-51cee24e7ce6
-  - name: Trojan_United States 🇺🇲
+  - name: Trojan_United States 🇺🇲_1
     port: 1935
     server: x1us-amazon.devefun.net
     type: trojan
@@ -396,17 +227,7 @@ proxies:
     skip-cert-verify: true
     alpn:
       - h3,h2,http/1.1
-  - name: Vless_England 🇬🇧
-    port: 8080
-    server: x2uk-amazon.thanks-devefun-team-omg-i-needed-free-c-im-sure-you-are-the-bes.link
-    type: vless
-    network: ws
-    udp: true
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    uuid: 4b4cdddb-c15a-4c50-80ed-c0c175ed6f2c
-  - name: Trojan_England🇬🇧
+  - name: Trojan_England🇬🇧_1
     port: 1935
     server: x2uk-amazon.devefun.net
     type: trojan
@@ -418,195 +239,508 @@ proxies:
     alpn:
       - h3,h2,http/1.1
     client-fingerprint: chrome
+  - name: "💦 1 - Trojan - Domain : 2096_2"
+    port: 2096
+    server: sue-support.pages.dev
+    type: trojan
+    network: ws
+    udp: true
+    sni: sUE-SUpPorT.PAges.dEV
+    password: DC&&buj17.#donz*
+    skip-cert-verify: true
+    ws-opts:
+      path: /trf9s8jSBeX8npfF6G/MTYyLjE1OC4yMDEuODI=?ed=2560
+      headers:
+        host: sue-support.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
+  - name: "💦 2 - Trojan - Domain : 2096_2"
+    port: 2096
+    server: www.speedtest.net
+    type: trojan
+    network: ws
+    udp: true
+    sni: Sue-suppoRT.pAgeS.dEV
+    password: DC&&buj17.#donz*
+    skip-cert-verify: true
+    ws-opts:
+      path: /trjFapI0BLfN3cT9v4/MTYyLjE1OC4yMDEuODI=?ed=2560
+      headers:
+        host: sue-support.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
+  - name: "💦 3 - Trojan - IPv4 : 2096_2"
+    port: 2096
+    server: 188.114.96.3
+    type: trojan
+    network: ws
+    udp: true
+    sni: sUE-SuppORt.pAGeS.DeV
+    password: DC&&buj17.#donz*
+    skip-cert-verify: true
+    ws-opts:
+      path: /trv0bKhj5yqIDXOTTS/MTYyLjE1OC4yMDEuODI=?ed=2560
+      headers:
+        host: sue-support.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
+  - name: "💦 4 - Trojan - IPv4 : 2096_2"
+    port: 2096
+    server: 188.114.97.3
+    type: trojan
+    network: ws
+    udp: true
+    sni: sue-sUPPort.pagES.deV
+    password: DC&&buj17.#donz*
+    skip-cert-verify: true
+    ws-opts:
+      path: /trF2w2vMrWuABAwxQb/MTYyLjE1OC4yMDEuODI=?ed=2560
+      headers:
+        host: sue-support.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
+  - name: "💦 5 - Trojan - IPv6 : 2096_2"
+    port: 2096
+    server: "[2a06:98c1:3121::3]"
+    type: trojan
+    network: ws
+    udp: true
+    sni: SuE-sUPport.PAGEs.Dev
+    password: DC&&buj17.#donz*
+    skip-cert-verify: true
+    ws-opts:
+      path: /trV9LQsZ95UFuGheqY/MTYyLjE1OC4yMDEuODI=?ed=2560
+      headers:
+        host: sue-support.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
+  - name: "💦 6 - Trojan - IPv6 : 2096_2"
+    port: 2096
+    server: "[2a06:98c1:3120::3]"
+    type: trojan
+    network: ws
+    udp: true
+    sni: SUe-suPPOrT.pagEs.dEV
+    password: DC&&buj17.#donz*
+    skip-cert-verify: true
+    ws-opts:
+      path: /tr4Ol4eZfyNyw1bMeI/MTYyLjE1OC4yMDEuODI=?ed=2560
+      headers:
+        host: sue-support.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
+  - name: "💦 7 - Trojan - Clean IP : 2096_2"
+    port: 2096
+    server: 45.80.108.1
+    type: trojan
+    network: ws
+    udp: true
+    sni: suE-sUpPort.PAGES.DeV
+    password: DC&&buj17.#donz*
+    skip-cert-verify: true
+    ws-opts:
+      path: /trkFvZXtj3AJKzyJr7/MTYyLjE1OC4yMDEuODI=?ed=2560
+      headers:
+        host: sue-support.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
+  - name: Trojan_France 🇨🇵_2
+    port: 1935
+    server: x1fr-amazon.devefun.net
+    type: trojan
+    network: tcp
+    udp: true
+    sni: x1fr-amazon.devefun.net
+    password: JFchk1TxFG
+    skip-cert-verify: true
+    alpn:
+      - h3,h2,http/1.1
+    client-fingerprint: chrome
+  - name: Trojan_Spain 🇪🇸_2
+    port: 1935
+    server: x14spain.devefun.net
+    type: trojan
+    network: tcp
+    udp: true
+    sni: x14spain.devefun.net
+    password: 9Bb6wjlTOA
+    skip-cert-verify: true
+    alpn:
+      - h3,h2,http/1.1
+    client-fingerprint: chrome
+  - name: Trojan_Germany 🇩🇪_2
+    port: 1935
+    server: x2ger-amazon.devefun.net
+    type: trojan
+    network: tcp
+    udp: true
+    sni: x2ger-amazon.devefun.net
+    password: Oe5CMj3tiO
+    skip-cert-verify: true
+    alpn:
+      - h3,h2,http/1.1
+  - name: Trojan_Sweden 🇸🇪_2
+    port: 1935
+    server: x2swe-amazon.devefun.net
+    type: trojan
+    network: tcp
+    udp: true
+    sni: x2swe-amazon.devefun.net
+    password: 0IgehHtJyk
+    skip-cert-verify: true
+    alpn:
+      - h3,h2,http/1.1
+  - name: Trojan_United States 🇺🇲_2
+    port: 1935
+    server: x1us-amazon.devefun.net
+    type: trojan
+    network: tcp
+    udp: true
+    sni: x1us-amazon.devefun.net
+    password: 7P2OjT41Wq
+    skip-cert-verify: true
+    alpn:
+      - h3,h2,http/1.1
+  - name: Trojan_England🇬🇧_2
+    port: 1935
+    server: x2uk-amazon.devefun.net
+    type: trojan
+    network: tcp
+    udp: true
+    sni: x2uk-amazon.devefun.net
+    password: sNBGK2ZtJr
+    skip-cert-verify: true
+    alpn:
+      - h3,h2,http/1.1
+    client-fingerprint: chrome
+  - name: "💧 1 - Trojan - Domain : 443"
+    port: 443
+    server: eupload65466.pages.dev
+    type: trojan
+    network: ws
+    udp: true
+    sni: euPlOaD65466.PagES.dev
+    password: uTkkJ_SmOhV]8r5A
+    skip-cert-verify: true
+    ws-opts:
+      path: /tr0CZgpQy0dLAlPRmB?ed=2560
+      headers:
+        host: eupload65466.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
+  - name: "💧 2 - Trojan - Domain : 443"
+    port: 443
+    server: www.speedtest.net
+    type: trojan
+    network: ws
+    udp: true
+    sni: eUPlOAd65466.pAGes.DEv
+    password: uTkkJ_SmOhV]8r5A
+    skip-cert-verify: true
+    ws-opts:
+      path: /trPVdZrW2PLNenA8y2?ed=2560
+      headers:
+        host: eupload65466.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
+  - name: "💧 3 - Trojan - IPv4 : 443"
+    port: 443
+    server: 188.114.96.3
+    type: trojan
+    network: ws
+    udp: true
+    sni: EUpLoAd65466.pagEs.dev
+    password: uTkkJ_SmOhV]8r5A
+    skip-cert-verify: true
+    ws-opts:
+      path: /tru64a8KrvgRDvY1Ag?ed=2560
+      headers:
+        host: eupload65466.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
+  - name: "💧 4 - Trojan - IPv4 : 443"
+    port: 443
+    server: 188.114.97.3
+    type: trojan
+    network: ws
+    udp: true
+    sni: EUPLOAd65466.Pages.dEv
+    password: uTkkJ_SmOhV]8r5A
+    skip-cert-verify: true
+    ws-opts:
+      path: /troiD5QhqJB0WJ8uil?ed=2560
+      headers:
+        host: eupload65466.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
+  - name: "💧 5 - Trojan - IPv6 : 443"
+    port: 443
+    server: "[2a06:98c1:3121::3]"
+    type: trojan
+    network: ws
+    udp: true
+    sni: euplOAd65466.pagES.dev
+    password: uTkkJ_SmOhV]8r5A
+    skip-cert-verify: true
+    ws-opts:
+      path: /trBGzaKAkeqKxsige3?ed=2560
+      headers:
+        host: eupload65466.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
+  - name: "💧 6 - Trojan - IPv6 : 443"
+    port: 443
+    server: "[2a06:98c1:3120::3]"
+    type: trojan
+    network: ws
+    udp: true
+    sni: eUPloaD65466.PAGes.dEv
+    password: uTkkJ_SmOhV]8r5A
+    skip-cert-verify: true
+    ws-opts:
+      path: /trJOM4FxVqe74tyiTs?ed=2560
+      headers:
+        host: eupload65466.pages.dev
+    alpn:
+      - h2,http/1.1
+    client-fingerprint: randomized
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "💦 1 - VLESS - Domain : 2096"
-      - "💦 2 - VLESS - Domain : 2096"
-      - "💦 3 - VLESS - IPv4 : 2096"
-      - "💦 4 - VLESS - IPv4 : 2096"
-      - "💦 5 - VLESS - IPv6 : 2096"
-      - "💦 6 - VLESS - IPv6 : 2096"
-      - "💦 7 - VLESS - Clean IP : 2096"
-      - "💦 1 - Trojan - Domain : 2096"
-      - "💦 2 - Trojan - Domain : 2096"
-      - "💦 3 - Trojan - IPv4 : 2096"
-      - "💦 4 - Trojan - IPv4 : 2096"
-      - "💦 5 - Trojan - IPv6 : 2096"
-      - "💦 6 - Trojan - IPv6 : 2096"
-      - "💦 7 - Trojan - Clean IP : 2096"
-      - Vless_France 🇨🇵
-      - Trojan_France 🇨🇵
-      - Vless_Spain 🇪🇸
-      - Trojan_Spain 🇪🇸
-      - Vless_Germany 🇩🇪
-      - Trojan_Germany 🇩🇪
-      - Vless_Sweden 🇸🇪
-      - Trojan_Sweden 🇸🇪
-      - Vless_United States 🇺🇲
-      - Trojan_United States 🇺🇲
-      - Vless_England 🇬🇧
-      - Trojan_England🇬🇧
+      - "💦 1 - Trojan - Domain : 2096_1"
+      - "💦 2 - Trojan - Domain : 2096_1"
+      - "💦 3 - Trojan - IPv4 : 2096_1"
+      - "💦 4 - Trojan - IPv4 : 2096_1"
+      - "💦 5 - Trojan - IPv6 : 2096_1"
+      - "💦 6 - Trojan - IPv6 : 2096_1"
+      - "💦 7 - Trojan - Clean IP : 2096_1"
+      - Trojan_France 🇨🇵_1
+      - Trojan_Spain 🇪🇸_1
+      - Trojan_Germany 🇩🇪_1
+      - Trojan_Sweden 🇸🇪_1
+      - Trojan_United States 🇺🇲_1
+      - Trojan_England🇬🇧_1
+      - "💦 1 - Trojan - Domain : 2096_2"
+      - "💦 2 - Trojan - Domain : 2096_2"
+      - "💦 3 - Trojan - IPv4 : 2096_2"
+      - "💦 4 - Trojan - IPv4 : 2096_2"
+      - "💦 5 - Trojan - IPv6 : 2096_2"
+      - "💦 6 - Trojan - IPv6 : 2096_2"
+      - "💦 7 - Trojan - Clean IP : 2096_2"
+      - Trojan_France 🇨🇵_2
+      - Trojan_Spain 🇪🇸_2
+      - Trojan_Germany 🇩🇪_2
+      - Trojan_Sweden 🇸🇪_2
+      - Trojan_United States 🇺🇲_2
+      - Trojan_England🇬🇧_2
+      - "💧 1 - Trojan - Domain : 443"
+      - "💧 2 - Trojan - Domain : 443"
+      - "💧 3 - Trojan - IPv4 : 443"
+      - "💧 4 - Trojan - IPv4 : 443"
+      - "💧 5 - Trojan - IPv6 : 443"
+      - "💧 6 - Trojan - IPv6 : 443"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "💦 1 - VLESS - Domain : 2096"
-      - "💦 2 - VLESS - Domain : 2096"
-      - "💦 3 - VLESS - IPv4 : 2096"
-      - "💦 4 - VLESS - IPv4 : 2096"
-      - "💦 5 - VLESS - IPv6 : 2096"
-      - "💦 6 - VLESS - IPv6 : 2096"
-      - "💦 7 - VLESS - Clean IP : 2096"
-      - "💦 1 - Trojan - Domain : 2096"
-      - "💦 2 - Trojan - Domain : 2096"
-      - "💦 3 - Trojan - IPv4 : 2096"
-      - "💦 4 - Trojan - IPv4 : 2096"
-      - "💦 5 - Trojan - IPv6 : 2096"
-      - "💦 6 - Trojan - IPv6 : 2096"
-      - "💦 7 - Trojan - Clean IP : 2096"
-      - Vless_France 🇨🇵
-      - Trojan_France 🇨🇵
-      - Vless_Spain 🇪🇸
-      - Trojan_Spain 🇪🇸
-      - Vless_Germany 🇩🇪
-      - Trojan_Germany 🇩🇪
-      - Vless_Sweden 🇸🇪
-      - Trojan_Sweden 🇸🇪
-      - Vless_United States 🇺🇲
-      - Trojan_United States 🇺🇲
-      - Vless_England 🇬🇧
-      - Trojan_England🇬🇧
+      - "💦 1 - Trojan - Domain : 2096_1"
+      - "💦 2 - Trojan - Domain : 2096_1"
+      - "💦 3 - Trojan - IPv4 : 2096_1"
+      - "💦 4 - Trojan - IPv4 : 2096_1"
+      - "💦 5 - Trojan - IPv6 : 2096_1"
+      - "💦 6 - Trojan - IPv6 : 2096_1"
+      - "💦 7 - Trojan - Clean IP : 2096_1"
+      - Trojan_France 🇨🇵_1
+      - Trojan_Spain 🇪🇸_1
+      - Trojan_Germany 🇩🇪_1
+      - Trojan_Sweden 🇸🇪_1
+      - Trojan_United States 🇺🇲_1
+      - Trojan_England🇬🇧_1
+      - "💦 1 - Trojan - Domain : 2096_2"
+      - "💦 2 - Trojan - Domain : 2096_2"
+      - "💦 3 - Trojan - IPv4 : 2096_2"
+      - "💦 4 - Trojan - IPv4 : 2096_2"
+      - "💦 5 - Trojan - IPv6 : 2096_2"
+      - "💦 6 - Trojan - IPv6 : 2096_2"
+      - "💦 7 - Trojan - Clean IP : 2096_2"
+      - Trojan_France 🇨🇵_2
+      - Trojan_Spain 🇪🇸_2
+      - Trojan_Germany 🇩🇪_2
+      - Trojan_Sweden 🇸🇪_2
+      - Trojan_United States 🇺🇲_2
+      - Trojan_England🇬🇧_2
+      - "💧 1 - Trojan - Domain : 443"
+      - "💧 2 - Trojan - Domain : 443"
+      - "💧 3 - Trojan - IPv4 : 443"
+      - "💧 4 - Trojan - IPv4 : 443"
+      - "💧 5 - Trojan - IPv6 : 443"
+      - "💧 6 - Trojan - IPv6 : 443"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "💦 1 - VLESS - Domain : 2096"
-      - "💦 2 - VLESS - Domain : 2096"
-      - "💦 3 - VLESS - IPv4 : 2096"
-      - "💦 4 - VLESS - IPv4 : 2096"
-      - "💦 5 - VLESS - IPv6 : 2096"
-      - "💦 6 - VLESS - IPv6 : 2096"
-      - "💦 7 - VLESS - Clean IP : 2096"
-      - "💦 1 - Trojan - Domain : 2096"
-      - "💦 2 - Trojan - Domain : 2096"
-      - "💦 3 - Trojan - IPv4 : 2096"
-      - "💦 4 - Trojan - IPv4 : 2096"
-      - "💦 5 - Trojan - IPv6 : 2096"
-      - "💦 6 - Trojan - IPv6 : 2096"
-      - "💦 7 - Trojan - Clean IP : 2096"
-      - Vless_France 🇨🇵
-      - Trojan_France 🇨🇵
-      - Vless_Spain 🇪🇸
-      - Trojan_Spain 🇪🇸
-      - Vless_Germany 🇩🇪
-      - Trojan_Germany 🇩🇪
-      - Vless_Sweden 🇸🇪
-      - Trojan_Sweden 🇸🇪
-      - Vless_United States 🇺🇲
-      - Trojan_United States 🇺🇲
-      - Vless_England 🇬🇧
-      - Trojan_England🇬🇧
+      - "💦 1 - Trojan - Domain : 2096_1"
+      - "💦 2 - Trojan - Domain : 2096_1"
+      - "💦 3 - Trojan - IPv4 : 2096_1"
+      - "💦 4 - Trojan - IPv4 : 2096_1"
+      - "💦 5 - Trojan - IPv6 : 2096_1"
+      - "💦 6 - Trojan - IPv6 : 2096_1"
+      - "💦 7 - Trojan - Clean IP : 2096_1"
+      - Trojan_France 🇨🇵_1
+      - Trojan_Spain 🇪🇸_1
+      - Trojan_Germany 🇩🇪_1
+      - Trojan_Sweden 🇸🇪_1
+      - Trojan_United States 🇺🇲_1
+      - Trojan_England🇬🇧_1
+      - "💦 1 - Trojan - Domain : 2096_2"
+      - "💦 2 - Trojan - Domain : 2096_2"
+      - "💦 3 - Trojan - IPv4 : 2096_2"
+      - "💦 4 - Trojan - IPv4 : 2096_2"
+      - "💦 5 - Trojan - IPv6 : 2096_2"
+      - "💦 6 - Trojan - IPv6 : 2096_2"
+      - "💦 7 - Trojan - Clean IP : 2096_2"
+      - Trojan_France 🇨🇵_2
+      - Trojan_Spain 🇪🇸_2
+      - Trojan_Germany 🇩🇪_2
+      - Trojan_Sweden 🇸🇪_2
+      - Trojan_United States 🇺🇲_2
+      - Trojan_England🇬🇧_2
+      - "💧 1 - Trojan - Domain : 443"
+      - "💧 2 - Trojan - Domain : 443"
+      - "💧 3 - Trojan - IPv4 : 443"
+      - "💧 4 - Trojan - IPv4 : 443"
+      - "💧 5 - Trojan - IPv6 : 443"
+      - "💧 6 - Trojan - IPv6 : 443"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "💦 1 - VLESS - Domain : 2096"
-      - "💦 2 - VLESS - Domain : 2096"
-      - "💦 3 - VLESS - IPv4 : 2096"
-      - "💦 4 - VLESS - IPv4 : 2096"
-      - "💦 5 - VLESS - IPv6 : 2096"
-      - "💦 6 - VLESS - IPv6 : 2096"
-      - "💦 7 - VLESS - Clean IP : 2096"
-      - "💦 1 - Trojan - Domain : 2096"
-      - "💦 2 - Trojan - Domain : 2096"
-      - "💦 3 - Trojan - IPv4 : 2096"
-      - "💦 4 - Trojan - IPv4 : 2096"
-      - "💦 5 - Trojan - IPv6 : 2096"
-      - "💦 6 - Trojan - IPv6 : 2096"
-      - "💦 7 - Trojan - Clean IP : 2096"
-      - Vless_France 🇨🇵
-      - Trojan_France 🇨🇵
-      - Vless_Spain 🇪🇸
-      - Trojan_Spain 🇪🇸
-      - Vless_Germany 🇩🇪
-      - Trojan_Germany 🇩🇪
-      - Vless_Sweden 🇸🇪
-      - Trojan_Sweden 🇸🇪
-      - Vless_United States 🇺🇲
-      - Trojan_United States 🇺🇲
-      - Vless_England 🇬🇧
-      - Trojan_England🇬🇧
+      - "💦 1 - Trojan - Domain : 2096_1"
+      - "💦 2 - Trojan - Domain : 2096_1"
+      - "💦 3 - Trojan - IPv4 : 2096_1"
+      - "💦 4 - Trojan - IPv4 : 2096_1"
+      - "💦 5 - Trojan - IPv6 : 2096_1"
+      - "💦 6 - Trojan - IPv6 : 2096_1"
+      - "💦 7 - Trojan - Clean IP : 2096_1"
+      - Trojan_France 🇨🇵_1
+      - Trojan_Spain 🇪🇸_1
+      - Trojan_Germany 🇩🇪_1
+      - Trojan_Sweden 🇸🇪_1
+      - Trojan_United States 🇺🇲_1
+      - Trojan_England🇬🇧_1
+      - "💦 1 - Trojan - Domain : 2096_2"
+      - "💦 2 - Trojan - Domain : 2096_2"
+      - "💦 3 - Trojan - IPv4 : 2096_2"
+      - "💦 4 - Trojan - IPv4 : 2096_2"
+      - "💦 5 - Trojan - IPv6 : 2096_2"
+      - "💦 6 - Trojan - IPv6 : 2096_2"
+      - "💦 7 - Trojan - Clean IP : 2096_2"
+      - Trojan_France 🇨🇵_2
+      - Trojan_Spain 🇪🇸_2
+      - Trojan_Germany 🇩🇪_2
+      - Trojan_Sweden 🇸🇪_2
+      - Trojan_United States 🇺🇲_2
+      - Trojan_England🇬🇧_2
+      - "💧 1 - Trojan - Domain : 443"
+      - "💧 2 - Trojan - Domain : 443"
+      - "💧 3 - Trojan - IPv4 : 443"
+      - "💧 4 - Trojan - IPv4 : 443"
+      - "💧 5 - Trojan - IPv6 : 443"
+      - "💧 6 - Trojan - IPv6 : 443"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "💦 1 - VLESS - Domain : 2096"
-      - "💦 2 - VLESS - Domain : 2096"
-      - "💦 3 - VLESS - IPv4 : 2096"
-      - "💦 4 - VLESS - IPv4 : 2096"
-      - "💦 5 - VLESS - IPv6 : 2096"
-      - "💦 6 - VLESS - IPv6 : 2096"
-      - "💦 7 - VLESS - Clean IP : 2096"
-      - "💦 1 - Trojan - Domain : 2096"
-      - "💦 2 - Trojan - Domain : 2096"
-      - "💦 3 - Trojan - IPv4 : 2096"
-      - "💦 4 - Trojan - IPv4 : 2096"
-      - "💦 5 - Trojan - IPv6 : 2096"
-      - "💦 6 - Trojan - IPv6 : 2096"
-      - "💦 7 - Trojan - Clean IP : 2096"
-      - Vless_France 🇨🇵
-      - Trojan_France 🇨🇵
-      - Vless_Spain 🇪🇸
-      - Trojan_Spain 🇪🇸
-      - Vless_Germany 🇩🇪
-      - Trojan_Germany 🇩🇪
-      - Vless_Sweden 🇸🇪
-      - Trojan_Sweden 🇸🇪
-      - Vless_United States 🇺🇲
-      - Trojan_United States 🇺🇲
-      - Vless_England 🇬🇧
-      - Trojan_England🇬🇧
+      - "💦 1 - Trojan - Domain : 2096_1"
+      - "💦 2 - Trojan - Domain : 2096_1"
+      - "💦 3 - Trojan - IPv4 : 2096_1"
+      - "💦 4 - Trojan - IPv4 : 2096_1"
+      - "💦 5 - Trojan - IPv6 : 2096_1"
+      - "💦 6 - Trojan - IPv6 : 2096_1"
+      - "💦 7 - Trojan - Clean IP : 2096_1"
+      - Trojan_France 🇨🇵_1
+      - Trojan_Spain 🇪🇸_1
+      - Trojan_Germany 🇩🇪_1
+      - Trojan_Sweden 🇸🇪_1
+      - Trojan_United States 🇺🇲_1
+      - Trojan_England🇬🇧_1
+      - "💦 1 - Trojan - Domain : 2096_2"
+      - "💦 2 - Trojan - Domain : 2096_2"
+      - "💦 3 - Trojan - IPv4 : 2096_2"
+      - "💦 4 - Trojan - IPv4 : 2096_2"
+      - "💦 5 - Trojan - IPv6 : 2096_2"
+      - "💦 6 - Trojan - IPv6 : 2096_2"
+      - "💦 7 - Trojan - Clean IP : 2096_2"
+      - Trojan_France 🇨🇵_2
+      - Trojan_Spain 🇪🇸_2
+      - Trojan_Germany 🇩🇪_2
+      - Trojan_Sweden 🇸🇪_2
+      - Trojan_United States 🇺🇲_2
+      - Trojan_England🇬🇧_2
+      - "💧 1 - Trojan - Domain : 443"
+      - "💧 2 - Trojan - Domain : 443"
+      - "💧 3 - Trojan - IPv4 : 443"
+      - "💧 4 - Trojan - IPv4 : 443"
+      - "💧 5 - Trojan - IPv6 : 443"
+      - "💧 6 - Trojan - IPv6 : 443"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "💦 1 - VLESS - Domain : 2096"
-      - "💦 2 - VLESS - Domain : 2096"
-      - "💦 3 - VLESS - IPv4 : 2096"
-      - "💦 4 - VLESS - IPv4 : 2096"
-      - "💦 5 - VLESS - IPv6 : 2096"
-      - "💦 6 - VLESS - IPv6 : 2096"
-      - "💦 7 - VLESS - Clean IP : 2096"
-      - "💦 1 - Trojan - Domain : 2096"
-      - "💦 2 - Trojan - Domain : 2096"
-      - "💦 3 - Trojan - IPv4 : 2096"
-      - "💦 4 - Trojan - IPv4 : 2096"
-      - "💦 5 - Trojan - IPv6 : 2096"
-      - "💦 6 - Trojan - IPv6 : 2096"
-      - "💦 7 - Trojan - Clean IP : 2096"
-      - Vless_France 🇨🇵
-      - Trojan_France 🇨🇵
-      - Vless_Spain 🇪🇸
-      - Trojan_Spain 🇪🇸
-      - Vless_Germany 🇩🇪
-      - Trojan_Germany 🇩🇪
-      - Vless_Sweden 🇸🇪
-      - Trojan_Sweden 🇸🇪
-      - Vless_United States 🇺🇲
-      - Trojan_United States 🇺🇲
-      - Vless_England 🇬🇧
-      - Trojan_England🇬🇧
+      - "💦 1 - Trojan - Domain : 2096_1"
+      - "💦 2 - Trojan - Domain : 2096_1"
+      - "💦 3 - Trojan - IPv4 : 2096_1"
+      - "💦 4 - Trojan - IPv4 : 2096_1"
+      - "💦 5 - Trojan - IPv6 : 2096_1"
+      - "💦 6 - Trojan - IPv6 : 2096_1"
+      - "💦 7 - Trojan - Clean IP : 2096_1"
+      - Trojan_France 🇨🇵_1
+      - Trojan_Spain 🇪🇸_1
+      - Trojan_Germany 🇩🇪_1
+      - Trojan_Sweden 🇸🇪_1
+      - Trojan_United States 🇺🇲_1
+      - Trojan_England🇬🇧_1
+      - "💦 1 - Trojan - Domain : 2096_2"
+      - "💦 2 - Trojan - Domain : 2096_2"
+      - "💦 3 - Trojan - IPv4 : 2096_2"
+      - "💦 4 - Trojan - IPv4 : 2096_2"
+      - "💦 5 - Trojan - IPv6 : 2096_2"
+      - "💦 6 - Trojan - IPv6 : 2096_2"
+      - "💦 7 - Trojan - Clean IP : 2096_2"
+      - Trojan_France 🇨🇵_2
+      - Trojan_Spain 🇪🇸_2
+      - Trojan_Germany 🇩🇪_2
+      - Trojan_Sweden 🇸🇪_2
+      - Trojan_United States 🇺🇲_2
+      - Trojan_England🇬🇧_2
+      - "💧 1 - Trojan - Domain : 443"
+      - "💧 2 - Trojan - Domain : 443"
+      - "💧 3 - Trojan - IPv4 : 443"
+      - "💧 4 - Trojan - IPv4 : 443"
+      - "💧 5 - Trojan - IPv6 : 443"
+      - "💧 6 - Trojan - IPv6 : 443"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -629,32 +763,38 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "💦 1 - VLESS - Domain : 2096"
-      - "💦 2 - VLESS - Domain : 2096"
-      - "💦 3 - VLESS - IPv4 : 2096"
-      - "💦 4 - VLESS - IPv4 : 2096"
-      - "💦 5 - VLESS - IPv6 : 2096"
-      - "💦 6 - VLESS - IPv6 : 2096"
-      - "💦 7 - VLESS - Clean IP : 2096"
-      - "💦 1 - Trojan - Domain : 2096"
-      - "💦 2 - Trojan - Domain : 2096"
-      - "💦 3 - Trojan - IPv4 : 2096"
-      - "💦 4 - Trojan - IPv4 : 2096"
-      - "💦 5 - Trojan - IPv6 : 2096"
-      - "💦 6 - Trojan - IPv6 : 2096"
-      - "💦 7 - Trojan - Clean IP : 2096"
-      - Vless_France 🇨🇵
-      - Trojan_France 🇨🇵
-      - Vless_Spain 🇪🇸
-      - Trojan_Spain 🇪🇸
-      - Vless_Germany 🇩🇪
-      - Trojan_Germany 🇩🇪
-      - Vless_Sweden 🇸🇪
-      - Trojan_Sweden 🇸🇪
-      - Vless_United States 🇺🇲
-      - Trojan_United States 🇺🇲
-      - Vless_England 🇬🇧
-      - Trojan_England🇬🇧
+      - "💦 1 - Trojan - Domain : 2096_1"
+      - "💦 2 - Trojan - Domain : 2096_1"
+      - "💦 3 - Trojan - IPv4 : 2096_1"
+      - "💦 4 - Trojan - IPv4 : 2096_1"
+      - "💦 5 - Trojan - IPv6 : 2096_1"
+      - "💦 6 - Trojan - IPv6 : 2096_1"
+      - "💦 7 - Trojan - Clean IP : 2096_1"
+      - Trojan_France 🇨🇵_1
+      - Trojan_Spain 🇪🇸_1
+      - Trojan_Germany 🇩🇪_1
+      - Trojan_Sweden 🇸🇪_1
+      - Trojan_United States 🇺🇲_1
+      - Trojan_England🇬🇧_1
+      - "💦 1 - Trojan - Domain : 2096_2"
+      - "💦 2 - Trojan - Domain : 2096_2"
+      - "💦 3 - Trojan - IPv4 : 2096_2"
+      - "💦 4 - Trojan - IPv4 : 2096_2"
+      - "💦 5 - Trojan - IPv6 : 2096_2"
+      - "💦 6 - Trojan - IPv6 : 2096_2"
+      - "💦 7 - Trojan - Clean IP : 2096_2"
+      - Trojan_France 🇨🇵_2
+      - Trojan_Spain 🇪🇸_2
+      - Trojan_Germany 🇩🇪_2
+      - Trojan_Sweden 🇸🇪_2
+      - Trojan_United States 🇺🇲_2
+      - Trojan_England🇬🇧_2
+      - "💧 1 - Trojan - Domain : 443"
+      - "💧 2 - Trojan - Domain : 443"
+      - "💧 3 - Trojan - IPv4 : 443"
+      - "💧 4 - Trojan - IPv4 : 443"
+      - "💧 5 - Trojan - IPv6 : 443"
+      - "💧 6 - Trojan - IPv6 : 443"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
