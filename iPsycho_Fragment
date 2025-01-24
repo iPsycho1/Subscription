@@ -139,9 +139,6 @@
               ],
               "outboundTag": "direct",
               "type": "field"
-          }
-      ]
-  }
 },
 {
     "dns": {
