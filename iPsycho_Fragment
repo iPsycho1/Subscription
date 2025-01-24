@@ -1,4 +1,294 @@
-{"remarks":"🇩🇪 𝐈𝐑𝐂𝐏|@Ln2ray","dns":{"servers":["1.1.1.2","1.0.0.2"]},"policy":{"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},"log":{"access":"","error":"","loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"listen":"127.0.0.1","protocol":"socks","sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false},"settings":{"auth":"noauth","udp":true,"allowTransparent":false}},{"tag":"http","port":10809,"listen":"127.0.0.1","protocol":"http","sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false},"settings":{"auth":"noauth","udp":true,"allowTransparent":false}},{"tag":"api","port":9090,"listen":"127.0.0.1","protocol":"dokodemo-door","settings":{"udp":false,"address":"127.0.0.1","allowTransparent":false}}],"outbounds":[{
+[
+{
+  "dns": {
+      "servers": [
+          "8.8.8.8"
+      ]
+  },
+  "inbounds": [
+      {
+          "listen": "127.0.0.1",
+          "port": 10808,
+          "protocol": "socks",
+          "settings": {
+              "auth": "noauth",
+              "udp": true,
+              "userLevel": 8
+          },
+          "sniffing": {
+              "destOverride": [
+                  "http",
+                  "tls"
+              ],
+              "enabled": true,
+              "routeOnly": true
+          },
+          "tag": "socks"
+      }
+  ],
+  "log": {
+      "loglevel": "none"
+  },
+  "outbounds": [
+      {
+          "mux": {
+              "concurrency": 8,
+              "enabled": false,
+              "xudpConcurrency": 8,
+              "xudpProxyUDP443": "reject"
+          },
+          "protocol": "vless",
+          "settings": {
+              "vnext": [
+                  {
+                      "address": "media.sanaiegh.ir",
+                      "port": 443,
+                      "users": [
+                          {
+                              "encryption": "none",
+                              "flow": "",
+                              "id": "5a7d02b8-aace-4fe3-aa4a-9fa3771d51e5",
+                              "level": 8
+                          }
+                      ]
+                  }
+              ]
+          },
+          "streamSettings": {
+              "network": "xhttp",
+              "security": "tls",
+              "tlsSettings": {
+                  "allowInsecure": false,
+                  "alpn": [
+                      "h2"
+                  ],
+                  "serverName": "media.sanaiegh.ir",
+                  "show": false
+              },
+              "xhttpSettings": {
+                  "host": "media.sanaiegh.ir",
+                  "mode": "packet-up",
+                  "path": "/ln2ray",
+                  "xmux": {
+                      "maxConcurrency": "8-64",
+                      "cMaxReuseTimes": "64-256"
+                  }
+              }
+          },
+          "tag": "proxy"
+      },
+      {
+          "protocol": "freedom",
+          "settings": {
+              "domainStrategy": "UseIP"
+          },
+          "tag": "direct"
+      },
+      {
+          "protocol": "blackhole",
+          "settings": {
+              "response": {
+                  "type": "http"
+              }
+          },
+          "tag": "block"
+      }
+  ],
+  "policy": {
+      "levels": {
+          "8": {
+              "connIdle": 300,
+              "downlinkOnly": 1,
+              "handshake": 4,
+              "uplinkOnly": 1
+          }
+      },
+      "system": {
+          "statsOutboundUplink": true,
+          "statsOutboundDownlink": true
+      }
+  },
+  "remarks": "🇩🇪 IRCP | xhttp H2",
+  "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+          {
+              "network": "udp",
+              "outboundTag": "block",
+              "port": "443",
+              "type": "field"
+          },
+          {
+              "ip": [
+                  "geoip:private"
+              ],
+              "outboundTag": "direct",
+              "type": "field"
+          },
+          {
+              "domain": [
+                  "geosite:private"
+              ],
+              "outboundTag": "direct",
+              "type": "field"
+          },
+          {
+              "domain": [
+                  "regexp:.*\\.ir$",
+                  "regexp:.*\\.xn--mgba3a4f16a$"
+              ],
+              "outboundTag": "direct",
+              "type": "field"
+          }
+      ]
+  }
+},
+{
+    "dns": {
+        "servers": [
+            "8.8.8.8"
+        ]
+    },
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "userLevel": 8
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "enabled": true,
+                "routeOnly": true
+            },
+            "tag": "socks"
+        }
+    ],
+    "log": {
+        "loglevel": "none"
+    },
+    "outbounds": [
+        {
+            "mux": {
+                "concurrency": 8,
+                "enabled": false,
+                "xudpConcurrency": 8,
+                "xudpProxyUDP443": "reject"
+            },
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "45.90.96.19",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "",
+                                "id": "5a7d02b8-aace-4fe3-aa4a-9fa3771d51e5",
+                                "level": 8
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "xhttp",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "alpn": [
+                        "h3"
+                    ],
+                    "serverName": "media.sanaiegh.ir",
+                    "show": false
+                },
+                "xhttpSettings": {
+                    "host": "media.sanaiegh.ir",
+                    "mode": "packet-up",
+                    "path": "/ln2ray",
+                    "xmux": {
+                        "maxConcurrency": "8-64",
+                        "cMaxReuseTimes": "64-256"
+                    }
+                }
+            },
+            "tag": "proxy"
+        },
+        {
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "UseIP"
+            },
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {
+                "response": {
+                    "type": "http"
+                }
+            },
+            "tag": "block"
+        }
+    ],
+    "policy": {
+        "levels": {
+            "8": {
+                "connIdle": 300,
+                "downlinkOnly": 1,
+                "handshake": 4,
+                "uplinkOnly": 1
+            }
+        },
+        "system": {
+            "statsOutboundUplink": true,
+            "statsOutboundDownlink": true
+        }
+    },
+    "remarks": "🇩🇪 IRCP | xhttp Quic",
+    "routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "network": "udp",
+                "outboundTag": "block",
+                "port": "443",
+                "type": "field"
+            },
+            {
+                "ip": [
+                    "geoip:private"
+                ],
+                "outboundTag": "direct",
+                "type": "field"
+            },
+            {
+                "domain": [
+                    "geosite:private"
+                ],
+                "outboundTag": "direct",
+                "type": "field"
+            },
+            {
+                "domain": [
+                    "regexp:.*\\.ir$",
+                    "regexp:.*\\.xn--mgba3a4f16a$"
+                ],
+                "outboundTag": "direct",
+                "type": "field"
+            }
+        ]
+    }
+}
+]
+{"remarks":"🇩🇪 𝐈𝐑𝐂𝐏","dns":{"servers":["1.1.1.2","1.0.0.2"]},"policy":{"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},"log":{"access":"","error":"","loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"listen":"127.0.0.1","protocol":"socks","sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false},"settings":{"auth":"noauth","udp":true,"allowTransparent":false}},{"tag":"http","port":10809,"listen":"127.0.0.1","protocol":"http","sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false},"settings":{"auth":"noauth","udp":true,"allowTransparent":false}},{"tag":"api","port":9090,"listen":"127.0.0.1","protocol":"dokodemo-door","settings":{"udp":false,"address":"127.0.0.1","allowTransparent":false}}],"outbounds":[{
             "tag": "proxy",
             "protocol": "vless",
             "settings": {
@@ -48,291 +338,3 @@
             }
         },
 {"tag": "fragment","protocol":"freedom","settings":{"domainStrategy":"AsIs","fragment":{"packets": "1-2","length": "4-6","interval": "8-15"}},"streamSettings":{"sockopt":{"TcpNoDelay": true,"tcpKeepAliveIdle":100,"mark": 255}}},{"tag":"direct","protocol":"freedom","settings":{}},{"tag":"block","protocol":"blackhole","settings":{"response":{"type":"http"}}}],"stats":{},"api":{"tag":"api","services":["StatsService"]},"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","inboundTag":["api"],"outboundTag":"api"},{"type":"field","outboundTag":"block","domain":["geosite:category-ads-all"]},{"type":"field","outboundTag":"direct","domain":["geosite:cn"]},{"type": "field","outboundTag": "direct","ip": ["geoip:private","geoip:cn"]}]}}
-{
-  "dns": {
-    "servers": [
-      "8.8.8.8"
-    ]
-  },
-  "inbounds": [
-    {
-      "listen": "127.0.0.1",
-      "port": 10808,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
-      },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true,
-        "routeOnly": true
-      },
-      "tag": "socks"
-    }
-  ],
-  "log": {
-    "loglevel": "none"
-  },
-  "outbounds": [
-    {
-      "mux": {
-        "concurrency": 8,
-        "enabled": false,
-        "xudpConcurrency": 8,
-        "xudpProxyUDP443": "reject"
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "media.sanaiegh.ir",
-            "port": 443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "",
-                "id": "5a7d02b8-aace-4fe3-aa4a-9fa3771d51e5",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": false,
-          "alpn": [
-            "h2"
-          ],
-          "serverName": "media.sanaiegh.ir",
-          "show": false
-        },
-        "xhttpSettings": {
-          "host": "media.sanaiegh.ir",
-          "mode": "packet-up",
-          "path": "/ln2ray",
-          "xmux": {
-            "maxConcurrency": "8-64",
-            "cMaxReuseTimes": "64-256"
-          }
-        }
-      },
-      "tag": "proxy"
-    },
-    {
-      "protocol": "freedom",
-      "settings": {
-        "domainStrategy": "UseIP"
-      },
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "settings": {
-        "response": {
-          "type": "http"
-        }
-      },
-      "tag": "block"
-    }
-  ],
-  "policy": {
-    "levels": {
-      "8": {
-        "connIdle": 300,
-        "downlinkOnly": 1,
-        "handshake": 4,
-        "uplinkOnly": 1
-      }
-    },
-    "system": {
-      "statsOutboundUplink": true,
-      "statsOutboundDownlink": true
-    }
-  },
-  "remarks": "🇩🇪 IRCP | xhttp H2",
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      {
-        "network": "udp",
-        "outboundTag": "block",
-        "port": "443",
-        "type": "field"
-      },
-      {
-        "ip": [
-          "geoip:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "domain": [
-          "geosite:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "domain": [
-          "regexp:.*\\.ir$",
-          "regexp:.*\\.xn--mgba3a4f16a$"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      }
-    ]
-  }
-}
-{
-  "dns": {
-    "servers": [
-      "8.8.8.8"
-    ]
-  },
-  "inbounds": [
-    {
-      "listen": "127.0.0.1",
-      "port": 10808,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
-      },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true,
-        "routeOnly": true
-      },
-      "tag": "socks"
-    }
-  ],
-  "log": {
-    "loglevel": "none"
-  },
-  "outbounds": [
-    {
-      "mux": {
-        "concurrency": 8,
-        "enabled": false,
-        "xudpConcurrency": 8,
-        "xudpProxyUDP443": "reject"
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "45.90.96.19",
-            "port": 443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "",
-                "id": "5a7d02b8-aace-4fe3-aa4a-9fa3771d51e5",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": false,
-          "alpn": [
-            "h3"
-          ],
-          "serverName": "media.sanaiegh.ir",
-          "show": false
-        },
-        "xhttpSettings": {
-          "host": "media.sanaiegh.ir",
-          "mode": "packet-up",
-          "path": "/ln2ray",
-          "xmux": {
-            "maxConcurrency": "8-64",
-            "cMaxReuseTimes": "64-256"
-          }
-        }
-      },
-      "tag": "proxy"
-    },
-    {
-      "protocol": "freedom",
-      "settings": {
-        "domainStrategy": "UseIP"
-      },
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "settings": {
-        "response": {
-          "type": "http"
-        }
-      },
-      "tag": "block"
-    }
-  ],
-  "policy": {
-    "levels": {
-      "8": {
-        "connIdle": 300,
-        "downlinkOnly": 1,
-        "handshake": 4,
-        "uplinkOnly": 1
-      }
-    },
-    "system": {
-      "statsOutboundUplink": true,
-      "statsOutboundDownlink": true
-    }
-  },
-  "remarks": "🇩🇪 IRCP | xhttp Quic",
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      {
-        "network": "udp",
-        "outboundTag": "block",
-        "port": "443",
-        "type": "field"
-      },
-      {
-        "ip": [
-          "geoip:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "domain": [
-          "geosite:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "domain": [
-          "regexp:.*\\.ir$",
-          "regexp:.*\\.xn--mgba3a4f16a$"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      }
-    ]
-  }
-}
