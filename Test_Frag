@@ -1,0 +1,224 @@
+[
+{
+{
+  "remarks": "Suevpnx_ServLess",
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "none",
+    "dnsLog": false
+  },
+  "dns": {
+    "tag": "dns",
+    "hosts": {
+      "cloudflare-dns.com": [
+        "172.67.73.38",
+        "104.19.155.92",
+        "172.67.73.163",
+        "104.18.155.42",
+        "104.16.124.175",
+        "104.16.248.249",
+        "104.16.249.249",
+        "104.26.13.8"
+      ],
+      "domain:youtube.com": ["google.com"]
+    },
+    "servers": ["https://cloudflare-dns.com/dns-query"]
+  },
+  "inbounds": [
+    {
+      "domainOverride": ["http", "tls"],
+      "protocol": "socks",
+      "tag": "socks-in",
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      }
+    },
+    {
+      "protocol": "http",
+      "tag": "http-in",
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "settings": {
+        "userLevel": 8
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "tag": "fragment-out",
+      "domainStrategy": "UseIP",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
+      "settings": {
+        "fragment": {
+          "packets": "tlshello",
+          "length": "10-20",
+          "interval": "10-20"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "tcpKeepAliveIdle": 100,
+          "mark": 255,
+          "domainStrategy": "UseIP"
+        }
+      }
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "protocol": "vless",
+      "tag": "fakeproxy-out",
+      "domainStrategy": "",
+      "settings": {
+        "vnext": [
+          {
+            "address": "google.com",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "UUID",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": ["h2", "http/1.1"],
+          "fingerprint": "randomized",
+          "publicKey": "",
+          "serverName": "google.com",
+          "shortId": "",
+          "show": false,
+          "spiderX": ""
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "www.speedtest.com"
+          },
+          "path": "/"
+        }
+      },
+      "mux": {
+        "concurrency": 8,
+        "enabled": false
+      }
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "inboundTag": ["socks-in", "http-in"],
+        "type": "field",
+        "port": "53",
+        "outboundTag": "dns-out",
+        "enabled": true
+      },
+      {
+        "inboundTag": ["socks-in", "http-in"],
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "fragment-out",
+        "enabled": true
+      }
+    ],
+    "strategy": "rules"
+  },
+  "stats": {}
+}
+},
+{
+{"remarks":"🇩🇪 𝐈𝐑𝐂𝐏","dns":{"servers":["1.1.1.2","1.0.0.2"]},"policy":{"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},"log":{"access":"","error":"","loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"listen":"127.0.0.1","protocol":"socks","sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false},"settings":{"auth":"noauth","udp":true,"allowTransparent":false}},{"tag":"http","port":10809,"listen":"127.0.0.1","protocol":"http","sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false},"settings":{"auth":"noauth","udp":true,"allowTransparent":false}},{"tag":"api","port":9090,"listen":"127.0.0.1","protocol":"dokodemo-door","settings":{"udp":false,"address":"127.0.0.1","allowTransparent":false}}],"outbounds":[{
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "c.88981401.xyz",
+                        "port": 443,
+                        "users": [
+                            {
+                                "id": "c4258f50-fe5d-4b6c-9f09-5a193b7d34ef",
+                                "alterId": 0,
+                                "email": "IRCP",
+                                "security": "auto",
+                                "encryption": "none"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": "blog.sooriland.blog",
+                    "fingerprint": "firefox",
+                    "show": false
+                },
+                "wsSettings": {
+                    "path": "/@ln2ray?ed=2560",
+                    "headers": {
+                        "Host": "blog.sooriland.blog",
+                        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:127.0) Gecko/20100101 Firefox/127.0"
+                    }
+                },
+                "sockopt": {
+                    "dialerProxy": "fragment",
+                    "tcpKeepAliveIdle": 100,
+                    "mark": 255
+                }
+            },
+            "mux": {
+                "enabled": true,
+                "concurrency": 8,
+                "xudpConcurrency": 8,
+                "xudpProxyUDP443": "reject"
+            }
+        },
+{"tag": "fragment","protocol":"freedom","settings":{"domainStrategy":"AsIs","fragment":{"packets": "1-2","length": "4-6","interval": "8-15"}},"streamSettings":{"sockopt":{"TcpNoDelay": true,"tcpKeepAliveIdle":100,"mark": 255}}},{"tag":"direct","protocol":"freedom","settings":{}},{"tag":"block","protocol":"blackhole","settings":{"response":{"type":"http"}}}],"stats":{},"api":{"tag":"api","services":["StatsService"]},"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","inboundTag":["api"],"outboundTag":"api"},{"type":"field","outboundTag":"block","domain":["geosite:category-ads-all"]},{"type":"field","outboundTag":"direct","domain":["geosite:cn"]},{"type": "field","outboundTag": "direct","ip": ["geoip:private","geoip:cn"]}]}}
+}
+]
