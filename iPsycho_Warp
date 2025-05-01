@@ -1,0 +1,7 @@
+warp://188.114.98.108:955/?ifp=10-20&ifps=20-30&ifpd=3-6&ifpm=m4&&detour=warp://188.114.98.108:955/?ifp=10-20&ifps=20-30&ifpd=3-6&ifpm=m4#Suevpnx-WoW-IPv4
+
+warp://188.114.96.213:2408/?ifp=10-20&ifps=20-30&ifpd=3-6&ifpm=m4&&detour=warp://188.114.96.213:2408/?ifp=10-20&ifps=20-30&ifpd=3-6&ifpm=m4#Suevpnx-WoW-IPv4
+
+warp://[2606:4700:d0::f418:210b:6dc8:a2b7]:1843/?ifp=10-20&ifps=20-30&ifpd=3-6&ifpm=m4&&detour=warp://[2606:4700:d0::f418:210b:6dc8:a2b7]:1843/?ifp=10-20&ifps=20-30&ifpd=3-6&ifpm=m4#Suevpnx-WoW-IPv6
+
+warp://[2606:4700:d0::3a49:3263:8f35:4d20]:1070/?ifp=10-20&ifps=20-30&ifpd=3-6&ifpm=m4&&detour=warp://[2606:4700:d0::3a49:3263:8f35:4d20]:1070/?ifp=10-20&ifps=20-30&ifpd=3-6&ifpm=m4#Suevpnx-WoW-IPv6
