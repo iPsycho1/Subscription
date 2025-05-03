@@ -1,1 +1,5 @@
-warp://p1@[2606:4700:d0::6ed3:66da:d5b5:811e]:945?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Suevpnx&&detour=warp://p2@162.159.192.53:8742#Suevpnx
+warp://p1@[2606:4700:d0::6ed3:66da:d5b5:811e]:945?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Suevpnx-iPv6&&detour=warp://p2@162.159.192.53:8742#Suevpnx-iPv4
+warp://p1@[2606:4700:d0::dff8:7f45:604f:c89b]:8854?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Suevpnx-iPv6&&detour=warp://p2@188.114.98.22:7156#Suevpnx-iPv4
+warp://p1@[2606:4700:d0::78c7:c9fa:6e55:2abc]:4233?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Suevpnx-iPv6&&detour=warp://p2@162.159.192.62:3476#Suevpnx-iPv4
+warp://p1@[2606:4700:d0::9848:34e7:6c48:98dc]:903?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Suevpnx-iPv6&&detour=warp://p2@188.114.96.135:8319#Suevpnx-iPv4
+warp://p1@[2606:4700:d0::6ed3:66da:d5b5:811e]:945?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Suevpnx-iPv6&&detour=warp://p2@162.159.192.53:8742#Suevpnx-iPv4
