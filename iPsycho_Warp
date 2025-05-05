@@ -1,5 +1,1902 @@
-warp://p1@[2606:4700:d0::6ed3:66da:d5b5:811e]:945?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Suevpnx-iPv6&&detour=warp://p2@162.159.192.53:8742#Suevpnx-iPv4
-warp://p1@[2606:4700:d0::dff8:7f45:604f:c89b]:8854?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Suevpnx-iPv6&&detour=warp://p2@188.114.98.22:7156#Suevpnx-iPv4
-warp://p1@[2606:4700:d0::78c7:c9fa:6e55:2abc]:4233?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Suevpnx-iPv6&&detour=warp://p2@162.159.192.62:3476#Suevpnx-iPv4
-warp://p1@[2606:4700:d0::9848:34e7:6c48:98dc]:903?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Suevpnx-iPv6&&detour=warp://p2@188.114.96.135:8319#Suevpnx-iPv4
-warp://p1@[2606:4700:d0::6ed3:66da:d5b5:811e]:945?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Suevpnx-iPv6&&detour=warp://p2@162.159.192.53:8742#Suevpnx-iPv4
+mixed-port: 7890
+ipv6: true
+allow-lan: true
+mode: rule
+log-level: warning
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+unified-delay: false
+geo-auto-update: true
+geo-update-interval: 168
+external-controller: '127.0.0.1:9090'
+external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
+external-ui: ui
+external-controller-cors:
+  allow-origins: ['*']
+  allow-private-network: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+hosts: {}
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  respect-rules: true
+  use-hosts: true
+  use-system-hosts: false
+  nameserver:
+    - '9.9.9.9'
+    - '2620:fe::fe'
+    - '1.1.1.1'
+    - '2606:4700:4700::1111'
+    - '8.8.8.8'
+    - '2001:4860:4860::8888'
+    - '8.8.4.4'
+    - '2001:4860:4860::8844'
+  proxy-server-nameserver:
+    - '9.9.9.9'
+    - '2620:fe::fe'
+    - '1.1.1.1'
+    - '2606:4700:4700::1111'
+    - '8.8.8.8'
+    - '2001:4860:4860::8888'
+    - '8.8.4.4'
+    - '2001:4860:4860::8844'
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  strict-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 'any:53'
+  mtu: 1280
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+proxies:
+  - name: "🇮🇷 hamedp71 - IPv4"
+    type: wireguard
+    ip: 172.16.0.2/32
+    ipv6: 2001:db8:1::1
+    private-key: "pQ15jrTUSHWaZUZrR7VKob9PjbrStxUQJ/akkKkplsU="
+    server: 188.114.96.141
+    port: 854
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 250
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇩🇪 hamedp71 - IPv4"
+    type: wireguard
+    ip: 172.16.0.2/32
+    ipv6: 2001:db8:1::1
+    private-key: "gEvJgRYd6tzU6yYfAs24Re/8+WWvTsqGMKl+EBCUjFE="
+    server: 188.114.98.12
+    port: 942
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dialer-proxy: "🇮🇷 hamedp71 - IPv4"
+
+  - name: "🇮🇷 hamedp71 - IPv6"
+    type: wireguard
+    ip: 172.16.0.2/32
+    ipv6: 2001:db8:1::1
+    private-key: "U6ON8cy8qUknlIT2DGUXUlS0BnO9FhEl+UY7AfMlJ5I="
+    server: "[2606:4700:d0::e574:0079:bcd6:e1b4]"
+    port: 1018
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 250
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇸🇪 hamedp71 - IPv6"
+    type: wireguard
+    ip: 172.16.0.2/32
+    ipv6: 2001:db8:1::1
+    private-key: "0GapdERcPdqP7hXovlbv/HoUafjR3jB4EGGm+LXXdlA="
+    server: 188.114.98.216
+    port: 1018
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dialer-proxy: "🇮🇷 hamedp71 - IPv6"    
+
+  - name: "🇦🇺 Australia - IPv4-1"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "103.1.213.212"
+    port: 65142
+    public-key: "jCi1I5HBTtwCblBbMzOFmOOFNG1GilYOZgst0kyq9gY="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇦🇺 Australia - IPv4-2"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "103.77.234.212"
+    port: 65142
+    public-key: "Jhhq6jvPxABM8OmzaM4/zJbcoRBR5OZalIHrZaFuXAU="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇧🇦 Bosnia and Herzegovina - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "185.99.3.25"
+    port: 65142
+    public-key: "6oMHpHHL3pq6Pdr2HoDRYuyjcyQGxfQaSRQR+HPyvgc="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇦🇺 Australia - IPv4-3"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "103.77.232.76"
+    port: 65142
+    public-key: "eSxX+L8qX+1MdmwjtlZGIDbDivFdURBh5Rm1KfUpYzc="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇦🇷 Argentina - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "190.103.176.148"
+    port: 65142
+    public-key: "2+O8VAshLkyWM1b6Ye2Cuoa3R/guKZgQ+YLoCsseWCU="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇦🇺 Australia - IPv4-4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "103.108.95.228"
+    port: 65142
+    public-key: "iY4MhQqQTP4uT7U4w9DfUEVxi5I3HJvjZcIL2dwmtTw="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇦🇺 Australia - IPv4-5"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "116.206.228.180"
+    port: 65142
+    public-key: "r5BDU0T+VGZU6I+zuF3vlGrdORtgNvLhY08gQxrFRCw="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇦🇹 Austria (Vienna) - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "89.187.168.67"
+    port: 65142
+    public-key: "KtJIKy9zsCXtKwFMQeGDEZVXtqw+X1+5z10Rh84/N0s="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇦🇺 Australia (South Australia) - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "116.90.72.244"
+    port: 65142
+    public-key: "tEh6Z8bnFmQU2KWHWYOS7yuDFZgwn3LGOZAdR1hN8kU="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇦🇺 Australia - IPv4-6"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "103.62.50.132"
+    port: 65142
+    public-key: "KvFr7Te5+RaFATDKJzrNXKf44ws8J6E9WbNVsMPvY1I="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇨🇦 Canada - IPv4-1"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "23.191.80.4"
+    port: 65142
+    public-key: "w262TI0UyIg9pFunMiekVURYUuT/z4qXRor2Z7VcOn4="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇨🇦 Canada (Toronto) - IPv4-1"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "198.8.92.100"
+    port: 65142
+    public-key: "YxWQDjNmU41PJXtoobFek3Y6nhICSLgsqH+QKPO5AQ8="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇨🇦 Canada (Toronto) - IPv4-2"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "149.57.28.226"
+    port: 65142
+    public-key: "vwimooPysZvNdJULeFQVovYfqhsLG5gVdzgoTnfm+iE="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇨🇦 Canada - IPv4-2"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "104.244.210.244"
+    port: 65142
+    public-key: "IMHoX/bhNghQVQB0pYKi14pwJhkOcLevpiMa7Khaz2I="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇨🇭 Switzerland (Zurich) - IPv4-1"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "89.187.165.99"
+    port: 65142
+    public-key: "G7LkwWk08Ase/Wi9mnOW77brNBC0vTCemvy1IW1nlV4="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇨🇭 Switzerland (Zurich) - IPv4-2"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "185.156.175.180"
+    port: 65142
+    public-key: "uFOg97vQhHVCUfZy/HwmGH+dR6/9lpeWZ5tV3PysHRE="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇨🇾 Cyprus (Pafos) - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "46.199.75.107"
+    port: 65142
+    public-key: "90fjr1sq0Hgv2l+DgMaaGQ009SDw7VxmzJwaYmclaFs="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇨🇿 Czechia (Prague) - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "185.246.210.3"
+    port: 65142
+    public-key: "dAaOzl6DBAuFWC85UJUY378WwEHUoNqbE5lJMDfNamo="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇫🇷 France (Paris) - IPv4-1"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "45.89.174.36"
+    port: 65142
+    public-key: "3si2nD1DKbbkeZkdg3hLMfOYw1gdKbVFtTOj2NOA+nM="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇫🇷 France - IPv4-2"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "84.17.42.35"
+    port: 65142
+    public-key: "cmaT8JIehfRf5PWWDkcBRwLWDb3jrIkk/SDbw4JmUAc="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇬🇧 United Kingdom - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "193.36.118.228"
+    port: 65142
+    public-key: "bGn6yuCFQWWF8+ZMGlJ0M6+IJRlkLXn0/UI/mvIyYwQ="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇭🇰 Hong Kong - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "84.17.57.115"
+    port: 65142
+    public-key: "zi62xnrtbvAbaavB8MLoTF36BX/stxjfnGJ6mIsZYzg="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇮🇪 Ireland - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "23.92.127.36"
+    port: 65142
+    public-key: "VgzE+XeQUxX54wMZdhRBU4Qxqba95iVpXi197ZbBBgA="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇮🇸 Iceland (Reykjavik) - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "185.165.170.3"
+    port: 65142
+    public-key: "ua7TUXkcSiiHeTyCok5b3PX9DkJ4l5yVvGlSmJ34WU8="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇮🇹 Italy (Milan) - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "84.17.59.67"
+    port: 65142
+    public-key: "QI+u918O4tyAtoV37B6HVdiQeZoEUi0dWXhSsC3LiWQ="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇯🇵 Japan - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "138.199.22.163"
+    port: 65142
+    public-key: "8n68GM7n6dm6Hj3RIIh5q1q6Un52Cq82LYEXHRAtPg4="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇰🇪 Kenya - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "45.138.86.228"
+    port: 65142
+    public-key: "S/qPJPWnfwfb1pWIcKN8FH71j5dFt9eH2KbEeU1+QlE="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇱🇹 Lithuania (Kaunas) - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "37.156.216.148"
+    port: 65142
+    public-key: "0CUpqMsVggxsjvdZewCsBFsw84goCitq0G9nytQhpDw="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇱🇺 Luxembourg - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "185.221.132.228"
+    port: 65142
+    public-key: "BzMLell5uUM/d9aNGaGMog+GFH36s4dFO0WuQ6/VxCg="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇲🇰 North Macedonia (Skopje) - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "185.225.28.52"
+    port: 65142
+    public-key: "9J0kA4c4i7N/+6B+3j0zFkDTHocZNsw6eK6+sLZ1qCQ="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇳🇱 Netherlands - IPv4-1"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "84.17.46.3"
+    port: 65142
+    public-key: "pLzFr9exM2Z5oXw0iuKnXIJZxa4I0UEmyFC85sHtDwk="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇳🇱 Netherlands - IPv4-2"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "89.238.150.230"
+    port: 65142
+    public-key: "yrmgyxaJAxTEth7Gc8lXOQVHn9Gn/fzd4cLE+0WZjFI="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      
+  - name: "🇳🇱 Netherlands (Amsterdam) - IPv4-3"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "185.253.96.4"
+    port: 65142
+    public-key: "c9QHUQhVUNIYqcp5HQ4gwoSoKzAgK8uSsoiJUrlriDA="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇳🇴 Norway (Oslo) - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "37.120.203.68"
+    port: 65142
+    public-key: "y+Kvlfz0z8DF17hVvEezMml3SH3OaB2l5l09DPdQNCk="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇳🇿 New Zealand - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "103.108.94.164"
+    port: 80
+    public-key: "el0He87GLmmywBmn7ErEiuKd5Bjc6Q4zWciL86rYcxw="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇵🇦 Panama - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "138.186.142.204"
+    port: 65142
+    public-key: "3L8yhe+v7TzBeesOFxSdU2VUa8FG4PTuoiiUoV7DAGY="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇵🇱 Poland (Warsaw) - IPv4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "84.17.55.99"
+    port: 65142
+    public-key: "MYoOwWssF5fWZ+bOQINzfitdjwyqiHcJhr607wSAzEY="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇷🇺 Russia - IPv4-1"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "95.143.177.67"
+    port: 65142
+    public-key: "A557Tcs9ezMHjMO3QoCox2fgcc9/uR/nOjbw28AKqkg="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇷🇺 Russia - IPv4-2"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "188.124.42.116"
+    port: 65142
+    public-key: "gLPWBcPANL0mgwEkImb6PUJmR2ncz7S9DKIDDYvgJkk="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇷🇺 Russia - IPv4-3"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "94.242.50.185"
+    port: 65142
+    public-key: "Yom91OWyt0otz1S4hgQMhp1q1y8tpDvUWwVkNXpmpjc="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇸🇪 Sweden (Stockholm) - IPv4-1"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "195.181.166.130"
+    port: 65142
+    public-key: "HENIT1CTAKjPrhG4s64jPJSzEjtEZPRARxA3amm49WU="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇸🇪 Sweden (Stockholm) - IPv4-2"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: "2001:db8:1::1"
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: "79.142.76.199"
+    port: 65142
+    public-key: "P5X43E/SgvnJtbrKnJwLFxqFoZGsCghW2SxlXvfdzm0="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+
+  - name: "🇺🇦 Ukraine"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 37.19.218.3
+    port: 65142
+    public-key: "xd+b0SNB38ILyN8mfY3d7w7zLggbq4CkkxqPavP2OUk="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇹🇼 Taiwan"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 185.189.163.176
+    port: 65142
+    public-key: "dAAkV3G3YFurH3+3198clav9vlh4FxB1asqNc0tLeCk="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇸🇬 Singapore"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 156.146.56.112
+    port: 65142
+    public-key: "sv9o+LudivUcZh3f92hEFFu5KGCT/2QISYy3OpPC0h0="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇸🇬 Singapore 1"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 103.107.198.228
+    port: 65142
+    public-key: "tJa6iPx6mpOktn5KoalMslWcpg6pRUdVx3bKDi3wtDg="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇺🇸 United States 2"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 167.88.60.244
+    port: 65142
+    public-key: "/oz2frQv99JveBgmTXW22QXIEulQURK79BW+ugk8fCE="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇺🇸 United States 3"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 23.94.74.100
+    port: 65142
+    public-key: "mRksyUF7wDK/8uBoPoEujp+yoUhjhq0N2LnNJFJnmiE="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇺🇸 United States 4"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 104.255.169.111
+    port: 65142
+    public-key: "oIt9F8IfWqCvSQACrDcmfLPFrhn+RtG+Mr9/sd4VSSU="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇺🇸 United States 5"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 199.217.104.228
+    port: 65142
+    public-key: "5yBJlSpfxd8Hq4+X4ZD60MYc6tosaMh5inQwA18XCCk="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇺🇸 United States 6"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 198.12.64.36
+    port: 65142
+    public-key: "z77o+FZ5AcTxTvkNyjLv69ZqaQtzFoS6UdtTK1eyoE8="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇺🇸 United States 7"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 23.95.42.212
+    port: 65142
+    public-key: "47tLjymDPpTIBerb+wn02/XNFABF4YDAGwOnijSoZmQ="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇺🇸 United States 8"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: mci-371-wg.whiskergalaxy.com
+    port: 65142
+    public-key: "0VAbqR6QprUwYMbgo1Xuel23UzzibC7OIxDJYAe3wx4="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇺🇸 United States 9"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 217.138.217.212
+    port: 65142
+    public-key: "fvmyuUJF8JvjzIts5bROwwZQ0zkSB7lk/q8E4G3+F20="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇺🇸 United States 10"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 89.187.187.99
+    port: 65142
+    public-key: "7CGKj3gnMrJ73Q3TX/YPtk94ZqX+H3kfBbMwfhze/Hg="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇺🇸 United States 11"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 194.5.215.196
+    port: 65142
+    public-key: "1S9LgDyVSo2X34ZG8ukQQ7vqL5RpmXszNe0SYNjiUws="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4   
+
+  - name: "🇺🇸 United States"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 198.147.22.227
+    port: 65142
+    public-key: "b5fIKEXhihCI7f4NOkQO/2BOd+bYHa0c05OylImgB0E="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇻🇳 Vietnam"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 103.9.79.220
+    port: 65142
+    public-key: "SxBT11IISNRou7thGo5A1QtaMjfzPIzZXDxdYEbDxhE="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇿🇦 South Africa 1"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 165.73.248.92
+    port: 65142
+    public-key: "stPvzj5yM1z5Qg9H3gMvAKNPJLU0X3SeUSJPg3wqDR8="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇿🇦 South Africa"
+    type: wireguard
+    ip: 100.80.234.177/32
+    ipv6: 2001:db8:1::1
+    private-key: "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg="
+    server: 197.242.159.229
+    port: 65142
+    public-key: "Nh5LEJT44xbuvTQnv3OZ0bXi09BFXV4SBB1XVMI12Ec="
+    pre-shared-key: "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ="
+    allowed-ips: ["0.0.0.0/0", "::/0", "10.0.0.0/8", "!185.143.223.0/24", "!94.232.128.0/21"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dns: ["10.255.255.2", "8.8.8.8"]
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4    
+    
+proxy-groups:
+  - name: "🌐 گلوبال"
+    type: select
+    proxies:
+      - "🚀 انتخاب خودکار (بهترین)"
+      - "🇮🇷 hamedp71 - IPv4"
+      - "🇩🇪 hamedp71 - IPv4"
+      - "🇮🇷 hamedp71 - IPv6"
+      - "🇸🇪 hamedp71 - IPv6"      
+      - "🇦🇺 Australia - IPv4-1"
+      - "🇦🇺 Australia - IPv4-2"
+      - "🇧🇦 Bosnia and Herzegovina - IPv4"
+      - "🇦🇺 Australia - IPv4-3"
+      - "🇦🇷 Argentina - IPv4"
+      - "🇦🇺 Australia - IPv4-4"
+      - "🇦🇺 Australia - IPv4-5"
+      - "🇦🇹 Austria (Vienna) - IPv4"
+      - "🇦🇺 Australia (South Australia) - IPv4"
+      - "🇦🇺 Australia - IPv4-6"
+      - "🇨🇦 Canada - IPv4-1"
+      - "🇨🇦 Canada (Toronto) - IPv4-1"
+      - "🇨🇦 Canada (Toronto) - IPv4-2"
+      - "🇨🇦 Canada - IPv4-2"
+      - "🇨🇭 Switzerland (Zurich) - IPv4-1"
+      - "🇨🇭 Switzerland (Zurich) - IPv4-2"
+      - "🇨🇾 Cyprus (Pafos) - IPv4"
+      - "🇨🇿 Czechia (Prague) - IPv4"
+      - "🇫🇷 France (Paris) - IPv4-1"
+      - "🇫🇷 France - IPv4-2"
+      - "🇬🇧 United Kingdom - IPv4"
+      - "🇭🇰 Hong Kong - IPv4"
+      - "🇮🇪 Ireland - IPv4"
+      - "🇮🇸 Iceland (Reykjavik) - IPv4"
+      - "🇮🇹 Italy (Milan) - IPv4"
+      - "🇯🇵 Japan - IPv4"
+      - "🇰🇪 Kenya - IPv4"
+      - "🇱🇹 Lithuania (Kaunas) - IPv4"
+      - "🇱🇺 Luxembourg - IPv4"
+      - "🇲🇰 North Macedonia (Skopje) - IPv4"
+      - "🇳🇱 Netherlands - IPv4-1"
+      - "🇳🇱 Netherlands - IPv4-2"
+      - "🇳🇱 Netherlands (Amsterdam) - IPv4-3"
+      - "🇳🇴 Norway (Oslo) - IPv4"
+      - "🇳🇿 New Zealand - IPv4"
+      - "🇵🇦 Panama - IPv4"
+      - "🇵🇱 Poland (Warsaw) - IPv4"
+      - "🇷🇺 Russia - IPv4-1"
+      - "🇷🇺 Russia - IPv4-2"
+      - "🇷🇺 Russia - IPv4-3"
+      - "🇸🇪 Sweden (Stockholm) - IPv4-1"
+      - "🇸🇪 Sweden (Stockholm) - IPv4-2"
+      - "🇺🇦 Ukraine"
+      - "🇹🇼 Taiwan"
+      - "🇸🇬 Singapore"
+      - "🇸🇬 Singapore 1"
+      - "🇺🇸 United States 2"
+      - "🇺🇸 United States 3"
+      - "🇺🇸 United States 4"
+      - "🇺🇸 United States 5"
+      - "🇺🇸 United States 6"
+      - "🇺🇸 United States 7"
+      - "🇺🇸 United States 8"
+      - "🇺🇸 United States 9"
+      - "🇺🇸 United States 10"
+      - "🇺🇸 United States 11"
+      - "🇺🇸 United States"
+      - "🇻🇳 Vietnam"
+      - "🇿🇦 South Africa 1"
+      - "🇿🇦 South Africa"
+
+  - name: "🚀 انتخاب خودکار (بهترین)"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 600
+    tolerance: 100
+    proxies:
+      - "🇮🇷 hamedp71 - IPv4"
+      - "🇩🇪 hamedp71 - IPv4"
+      - "🇮🇷 hamedp71 - IPv6"
+      - "🇸🇪 hamedp71 - IPv6"      
+      - "🇦🇺 Australia - IPv4-1"
+      - "🇦🇺 Australia - IPv4-2"
+      - "🇧🇦 Bosnia and Herzegovina - IPv4"
+      - "🇦🇺 Australia - IPv4-3"
+      - "🇦🇷 Argentina - IPv4"
+      - "🇦🇺 Australia - IPv4-4"
+      - "🇦🇺 Australia - IPv4-5"
+      - "🇦🇹 Austria (Vienna) - IPv4"
+      - "🇦🇺 Australia (South Australia) - IPv4"
+      - "🇦🇺 Australia - IPv4-6"
+      - "🇨🇦 Canada - IPv4-1"
+      - "🇨🇦 Canada (Toronto) - IPv4-1"
+      - "🇨🇦 Canada (Toronto) - IPv4-2"
+      - "🇨🇦 Canada - IPv4-2"
+      - "🇨🇭 Switzerland (Zurich) - IPv4-1"
+      - "🇨🇭 Switzerland (Zurich) - IPv4-2"
+      - "🇨🇾 Cyprus (Pafos) - IPv4"
+      - "🇨🇿 Czechia (Prague) - IPv4"
+      - "🇫🇷 France (Paris) - IPv4-1"
+      - "🇫🇷 France - IPv4-2"
+      - "🇬🇧 United Kingdom - IPv4"
+      - "🇭🇰 Hong Kong - IPv4"
+      - "🇮🇪 Ireland - IPv4"
+      - "🇮🇸 Iceland (Reykjavik) - IPv4"
+      - "🇮🇹 Italy (Milan) - IPv4"
+      - "🇯🇵 Japan - IPv4"
+      - "🇰🇪 Kenya - IPv4"
+      - "🇱🇹 Lithuania (Kaunas) - IPv4"
+      - "🇱🇺 Luxembourg - IPv4"
+      - "🇲🇰 North Macedonia (Skopje) - IPv4"
+      - "🇳🇱 Netherlands - IPv4-1"
+      - "🇳🇱 Netherlands - IPv4-2"
+      - "🇳🇱 Netherlands (Amsterdam) - IPv4-3"
+      - "🇳🇴 Norway (Oslo) - IPv4"
+      - "🇳🇿 New Zealand - IPv4"
+      - "🇵🇦 Panama - IPv4"
+      - "🇵🇱 Poland (Warsaw) - IPv4"
+      - "🇷🇺 Russia - IPv4-1"
+      - "🇷🇺 Russia - IPv4-2"
+      - "🇷🇺 Russia - IPv4-3"
+      - "🇸🇪 Sweden (Stockholm) - IPv4-1"
+      - "🇸🇪 Sweden (Stockholm) - IPv4-2"
+      - "🇺🇦 Ukraine"
+      - "🇹🇼 Taiwan"
+      - "🇸🇬 Singapore"
+      - "🇸🇬 Singapore 1"
+      - "🇺🇸 United States 2"
+      - "🇺🇸 United States 3"
+      - "🇺🇸 United States 4"
+      - "🇺🇸 United States 5"
+      - "🇺🇸 United States 6"
+      - "🇺🇸 United States 7"
+      - "🇺🇸 United States 8"
+      - "🇺🇸 United States 9"
+      - "🇺🇸 United States 10"
+      - "🇺🇸 United States 11"
+      - "🇺🇸 United States"
+      - "🇻🇳 Vietnam"
+      - "🇿🇦 South Africa 1"
+      - "🇿🇦 South Africa"
+      
+rule-providers:
+  ir:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ir.txt"
+    path: "./ruleset/ir.txt"
+    interval: 86400
+  ir-cidr:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ircidr.txt"
+    path: "./ruleset/ir-cidr.txt"
+    interval: 86400
+  malware:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.txt"
+    path: "./ruleset/malware.txt"
+    interval: 86400
+  phishing:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.txt"
+    path: "./ruleset/phishing.txt"
+    interval: 86400
+  cryptominers:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.txt"
+    path: "./ruleset/cryptominers.txt"
+    interval: 86400
+  ads:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ads.txt"
+    path: "./ruleset/ads.txt"
+    interval: 86400
+
+rules:
+  - RULE-SET,ir,DIRECT
+  - RULE-SET,ir-cidr,DIRECT
+  - RULE-SET,malware,REJECT
+  - RULE-SET,phishing,REJECT
+  - RULE-SET,cryptominers,REJECT
+  - RULE-SET,ads,REJECT
+  - MATCH,🌐 گلوبال
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30
