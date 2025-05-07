@@ -1,0 +1,110 @@
+[
+  {
+    "remarks": "🇩🇪 IRCP 1",
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "c.88981401.xyz",
+              "port": 443,
+              "users": [
+                {
+                  "id": "c4258f50-fe5d-4b6c-9f09-5a193b7d34ef",
+                  "encryption": "none",
+                  "security": "auto"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "blog.sooriland.blog",
+            "fingerprint": "firefox"
+          },
+          "wsSettings": {
+            "path": "/@ln2ray?ed=2560",
+            "headers": {
+              "Host": "blog.sooriland.blog"
+            }
+          },
+          "sockopt": {
+            "dialerProxy": "fragment",
+            "tcpKeepAliveIdle": 100,
+            "mark": 255
+          }
+        }
+      },
+      {
+        "tag": "fragment",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "1-2",
+            "length": "4-6",
+            "interval": "8-15"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "remarks": "🇫🇷 IRCP 2",
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "fr.server.com",
+              "port": 443,
+              "users": [
+                {
+                  "id": "11111111-2222-3333-4444-555555555555",
+                  "encryption": "none",
+                  "security": "auto"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "fr.example.com",
+            "fingerprint": "chrome"
+          },
+          "wsSettings": {
+            "path": "/ws",
+            "headers": {
+              "Host": "fr.example.com"
+            }
+          },
+          "sockopt": {
+            "dialerProxy": "fragment",
+            "tcpKeepAliveIdle": 100,
+            "mark": 255
+          }
+        }
+      },
+      {
+        "tag": "fragment",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "2-3",
+            "length": "6-9",
+            "interval": "5-10"
+          }
+        }
+      }
+    ]
+  }
+]
