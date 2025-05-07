@@ -50,7 +50,7 @@
             }
         },
 {"tag": "fragment","protocol":"freedom","settings":{"domainStrategy":"AsIs","fragment":{"packets": "1-2","length": "4-6","interval": "8-15"}},"streamSettings":{"sockopt":{"TcpNoDelay": true,"tcpKeepAliveIdle":100,"mark": 255}}},{"tag":"direct","protocol":"freedom","settings":{}},{"tag":"block","protocol":"blackhole","settings":{"response":{"type":"http"}}}],"stats":{},"api":{"tag":"api","services":["StatsService"]},"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","inboundTag":["api"],"outboundTag":"api"},{"type":"field","outboundTag":"block","domain":["geosite:category-ads-all"]},{"type":"field","outboundTag":"direct","domain":["geosite:cn"]},{"type": "field","outboundTag": "direct","ip": ["geoip:private","geoip:cn"]}]}}
-[
+]
 },
 {
 {"remarks":"🇩🇪 𝐈𝐑𝐂𝐏","dns":{"servers":["1.1.1.2","1.0.0.2"]},"policy":{"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},"log":{"access":"","error":"","loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"listen":"127.0.0.1","protocol":"socks","sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false},"settings":{"auth":"noauth","udp":true,"allowTransparent":false}},{"tag":"http","port":10809,"listen":"127.0.0.1","protocol":"http","sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false},"settings":{"auth":"noauth","udp":true,"allowTransparent":false}},{"tag":"api","port":9090,"listen":"127.0.0.1","protocol":"dokodemo-door","settings":{"udp":false,"address":"127.0.0.1","allowTransparent":false}}],"outbounds":[{
