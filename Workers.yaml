@@ -137,14 +137,1628 @@ proxies:
         Host: node-562276409-ece9be.account12.workers.dev
     skip-cert-verify: true
     udp: true
-  - type: vless
+  - name: "💦 9 - VLESS - IPv4 : 2053"
+    type: vless
     server: 172.67.200.134
     port: 2053
     uuid: 3cd23424-7182-4f37-9461-7701917791f6
-    tls: false
+    network: ws
+    servername: NOdE-562276409-EcE9Be.ACcounT12.WoRkers.dEv
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiZkM2ODUzRHhHcFd0a20iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIxMjguMTk5LjAuMjgiLCIzNS4yMTIuMTkzLjEzIiwiMTc0LjEzNy42MS40MiJdfQ==?ed=2560
+      headers:
+        Host: node-562276409-ece9be.account12.workers.dev
     skip-cert-verify: true
     udp: true
-    name: 172.67.200.134
+  - name: 💦 1 - Trojan - Upstream Proxy
+    type: trojan
+    server: 127.0.0.1
+    port: 40443
+    password: 3cd23424-7182-4f37-9461-7701917791f6
+    sni: NOde-562276409-ece9Be.acCoUNT12.WoRkERs.dEV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiWXBENDVFYUIiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIxMjguMTk5LjAuMjgiLCIzNS4yMTIuMTkzLjEzIiwiMTc0LjEzNy42MS40MiJdfQ==?ed=2560
+      headers:
+        Host: node-562276409-ece9be.account12.workers.dev
+    udp: true
+  - name: "💦 2 - Trojan - Domain : 443"
+    type: trojan
+    server: node-562276409-ece9be.account12.workers.dev
+    port: 443
+    password: 3cd23424-7182-4f37-9461-7701917791f6
+    sni: Node-562276409-eCE9bE.ACcOUnT12.WORKERS.Dev
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiZWw3ZnZMblNNdzgiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIxMjguMTk5LjAuMjgiLCIzNS4yMTIuMTkzLjEzIiwiMTc0LjEzNy42MS40MiJdfQ==?ed=2560
+      headers:
+        Host: node-562276409-ece9be.account12.workers.dev
+    udp: true
+  - name: "💦 3 - Trojan - Domain : 443"
+    type: trojan
+    server: www.speedtest.net
+    port: 443
+    password: 3cd23424-7182-4f37-9461-7701917791f6
+    sni: noDE-562276409-eCE9bE.ACcOUnT12.workERs.DeV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiNlFQbVFUdFNaMVp1OVd3YSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjEyOC4xOTkuMC4yOCIsIjM1LjIxMi4xOTMuMTMiLCIxNzQuMTM3LjYxLjQyIl19?ed=2560
+      headers:
+        Host: node-562276409-ece9be.account12.workers.dev
+    udp: true
+  - name: "💦 4 - Trojan - IPv4 : 443"
+    type: trojan
+    server: 104.21.68.250
+    port: 443
+    password: 3cd23424-7182-4f37-9461-7701917791f6
+    sni: noDe-562276409-ece9be.acCoUnt12.WORKErs.DEv
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoibmo3TzhyZkUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIxMjguMTk5LjAuMjgiLCIzNS4yMTIuMTkzLjEzIiwiMTc0LjEzNy42MS40MiJdfQ==?ed=2560
+      headers:
+        Host: node-562276409-ece9be.account12.workers.dev
+    udp: true
+  - name: "💦 5 - Trojan - IPv4 : 443"
+    type: trojan
+    server: 172.67.200.134
+    port: 443
+    password: 3cd23424-7182-4f37-9461-7701917791f6
+    sni: NodE-562276409-eCe9bE.acCOunT12.wORKErS.dev
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiRlBDRU5oTUY1IiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMTI4LjE5OS4wLjI4IiwiMzUuMjEyLjE5My4xMyIsIjE3NC4xMzcuNjEuNDIiXX0=?ed=2560
+      headers:
+        Host: node-562276409-ece9be.account12.workers.dev
+    udp: true
+  - name: "💦 6 - Trojan - Domain : 2053"
+    type: trojan
+    server: node-562276409-ece9be.account12.workers.dev
+    port: 2053
+    password: 3cd23424-7182-4f37-9461-7701917791f6
+    sni: Node-562276409-ecE9be.aCCOuNT12.wORkErs.dEV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiOUZMT3lPNkRRQXFLUmpPIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMTI4LjE5OS4wLjI4IiwiMzUuMjEyLjE5My4xMyIsIjE3NC4xMzcuNjEuNDIiXX0=?ed=2560
+      headers:
+        Host: node-562276409-ece9be.account12.workers.dev
+    udp: true
+  - name: "💦 7 - Trojan - Domain : 2053"
+    type: trojan
+    server: www.speedtest.net
+    port: 2053
+    password: 3cd23424-7182-4f37-9461-7701917791f6
+    sni: nODE-562276409-eCE9bE.AcCOunT12.wORKErS.dEV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoicHFDTmdPNXhnd0Z3NzBPIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMTI4LjE5OS4wLjI4IiwiMzUuMjEyLjE5My4xMyIsIjE3NC4xMzcuNjEuNDIiXX0=?ed=2560
+      headers:
+        Host: node-562276409-ece9be.account12.workers.dev
+    udp: true
+  - name: "💦 8 - Trojan - IPv4 : 2053"
+    type: trojan
+    server: 104.21.68.250
+    port: 2053
+    password: 3cd23424-7182-4f37-9461-7701917791f6
+    sni: NoDe-562276409-Ece9Be.aCcOuNt12.wOrKeRS.Dev
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiSFVGdlY0Qk1jeCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjEyOC4xOTkuMC4yOCIsIjM1LjIxMi4xOTMuMTMiLCIxNzQuMTM3LjYxLjQyIl19?ed=2560
+      headers:
+        Host: node-562276409-ece9be.account12.workers.dev
+    udp: true
+  - name: "💦 9 - Trojan - IPv4 : 2053"
+    type: trojan
+    server: 172.67.200.134
+    port: 2053
+    password: 3cd23424-7182-4f37-9461-7701917791f6
+    sni: NOdE-562276409-EcE9Be.ACcounT12.WoRkers.dEv
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiYkEyc1pVcW1wem44RiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjEyOC4xOTkuMC4yOCIsIjM1LjIxMi4xOTMuMTMiLCIxNzQuMTM3LjYxLjQyIl19?ed=2560
+      headers:
+        Host: node-562276409-ece9be.account12.workers.dev
+    udp: true
+  - name: 💦 1 - VLESS - Upstream Proxy_1
+    type: vless
+    server: 127.0.0.1
+    port: 40443
+    uuid: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    network: ws
+    servername: NoDe-562276409-282e2e.TRanSfer34.wORkErS.DeV
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiT3Q0MFlSMGp0cFF5Z1MiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNC4xMzYuMTEyLjEwNCIsIjIzLjk1LjU2LjE5NSIsIjMuODYuODUuNjgiLCIxOTIuMy4xNTUuMjE3Il19?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 2 - VLESS - Domain : 443_1"
+    type: vless
+    server: node-562276409-282e2e.transfer34.workers.dev
+    port: 443
+    uuid: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    network: ws
+    servername: nODe-562276409-282e2E.TraNSFEr34.WoRkERS.deV
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiblBpYjloc2ZEWXRzdFBFdCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjM0LjEzNi4xMTIuMTA0IiwiMjMuOTUuNTYuMTk1IiwiMy44Ni44NS42OCIsIjE5Mi4zLjE1NS4yMTciXX0=?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 3 - VLESS - Domain : 443_1"
+    type: vless
+    server: www.speedtest.net
+    port: 443
+    uuid: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    network: ws
+    servername: NOdE-562276409-282E2e.tRaNsfer34.WOrKErS.DEv
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiR0RFS2dHR3BYQU4iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNC4xMzYuMTEyLjEwNCIsIjIzLjk1LjU2LjE5NSIsIjMuODYuODUuNjgiLCIxOTIuMy4xNTUuMjE3Il19?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 4 - VLESS - IPv4 : 443_1"
+    type: vless
+    server: 172.67.164.235
+    port: 443
+    uuid: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    network: ws
+    servername: nODe-562276409-282E2e.traNsFeR34.WORkERS.DEV
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiQklDOTBlakRTQzBFcWdkIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMzQuMTM2LjExMi4xMDQiLCIyMy45NS41Ni4xOTUiLCIzLjg2Ljg1LjY4IiwiMTkyLjMuMTU1LjIxNyJdfQ==?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 5 - VLESS - IPv4 : 443_1"
+    type: vless
+    server: 104.21.57.166
+    port: 443
+    uuid: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    network: ws
+    servername: nOde-562276409-282E2E.tranSFer34.wOrKErS.DEV
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiaUlsajRwNTdDQUUiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNC4xMzYuMTEyLjEwNCIsIjIzLjk1LjU2LjE5NSIsIjMuODYuODUuNjgiLCIxOTIuMy4xNTUuMjE3Il19?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 6 - VLESS - Domain : 2087"
+    type: vless
+    server: node-562276409-282e2e.transfer34.workers.dev
+    port: 2087
+    uuid: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    network: ws
+    servername: NODe-562276409-282e2e.traNSfer34.WorkErs.DeV
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoieWZVZWNDVllmIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMzQuMTM2LjExMi4xMDQiLCIyMy45NS41Ni4xOTUiLCIzLjg2Ljg1LjY4IiwiMTkyLjMuMTU1LjIxNyJdfQ==?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 7 - VLESS - Domain : 2087"
+    type: vless
+    server: www.speedtest.net
+    port: 2087
+    uuid: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    network: ws
+    servername: NODe-562276409-282E2e.TraNSfEr34.WORkeRs.DEV
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiN05malpocDBZNGcxIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMzQuMTM2LjExMi4xMDQiLCIyMy45NS41Ni4xOTUiLCIzLjg2Ljg1LjY4IiwiMTkyLjMuMTU1LjIxNyJdfQ==?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 8 - VLESS - IPv4 : 2087"
+    type: vless
+    server: 172.67.164.235
+    port: 2087
+    uuid: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    network: ws
+    servername: nODE-562276409-282E2E.trAnsFer34.worKerS.dEv
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiNDBFSDAzREp6dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjM0LjEzNi4xMTIuMTA0IiwiMjMuOTUuNTYuMTk1IiwiMy44Ni44NS42OCIsIjE5Mi4zLjE1NS4yMTciXX0=?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 9 - VLESS - IPv4 : 2087"
+    type: vless
+    server: 104.21.57.166
+    port: 2087
+    uuid: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    network: ws
+    servername: nODe-562276409-282E2e.trANSFeR34.woRKERs.dEV
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiZjZ4WDJuR0hVYUJvQlYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNC4xMzYuMTEyLjEwNCIsIjIzLjk1LjU2LjE5NSIsIjMuODYuODUuNjgiLCIxOTIuMy4xNTUuMjE3Il19?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 💦 1 - Trojan - Upstream Proxy_1
+    type: trojan
+    server: 127.0.0.1
+    port: 40443
+    password: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    sni: NoDe-562276409-282e2e.TRanSfer34.wORkErS.DeV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiWVZsM2NlVTEiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNC4xMzYuMTEyLjEwNCIsIjIzLjk1LjU2LjE5NSIsIjMuODYuODUuNjgiLCIxOTIuMy4xNTUuMjE3Il19?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    udp: true
+  - name: "💦 2 - Trojan - Domain : 443_1"
+    type: trojan
+    server: node-562276409-282e2e.transfer34.workers.dev
+    port: 443
+    password: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    sni: nODe-562276409-282e2E.TraNSFEr34.WoRkERS.deV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiT2tqakJ1RkVpUzdxMGRLQSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjM0LjEzNi4xMTIuMTA0IiwiMjMuOTUuNTYuMTk1IiwiMy44Ni44NS42OCIsIjE5Mi4zLjE1NS4yMTciXX0=?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    udp: true
+  - name: "💦 3 - Trojan - Domain : 443_1"
+    type: trojan
+    server: www.speedtest.net
+    port: 443
+    password: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    sni: NOdE-562276409-282E2e.tRaNsfer34.WOrKErS.DEv
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoidEk3ZkZnaXoiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNC4xMzYuMTEyLjEwNCIsIjIzLjk1LjU2LjE5NSIsIjMuODYuODUuNjgiLCIxOTIuMy4xNTUuMjE3Il19?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    udp: true
+  - name: "💦 4 - Trojan - IPv4 : 443_1"
+    type: trojan
+    server: 172.67.164.235
+    port: 443
+    password: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    sni: nODe-562276409-282E2e.traNsFeR34.WORkERS.DEV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiZTRhNzhlYmpXMCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjM0LjEzNi4xMTIuMTA0IiwiMjMuOTUuNTYuMTk1IiwiMy44Ni44NS42OCIsIjE5Mi4zLjE1NS4yMTciXX0=?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    udp: true
+  - name: "💦 5 - Trojan - IPv4 : 443_1"
+    type: trojan
+    server: 104.21.57.166
+    port: 443
+    password: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    sni: nOde-562276409-282E2E.tranSFer34.wOrKErS.DEV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiVW0wc3JCWDciLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNC4xMzYuMTEyLjEwNCIsIjIzLjk1LjU2LjE5NSIsIjMuODYuODUuNjgiLCIxOTIuMy4xNTUuMjE3Il19?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    udp: true
+  - name: "💦 6 - Trojan - Domain : 2087"
+    type: trojan
+    server: node-562276409-282e2e.transfer34.workers.dev
+    port: 2087
+    password: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    sni: NODe-562276409-282e2e.traNSfer34.WorkErs.DeV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiY2JlTUsySVZwODc0MmQiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNC4xMzYuMTEyLjEwNCIsIjIzLjk1LjU2LjE5NSIsIjMuODYuODUuNjgiLCIxOTIuMy4xNTUuMjE3Il19?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    udp: true
+  - name: "💦 7 - Trojan - Domain : 2087"
+    type: trojan
+    server: www.speedtest.net
+    port: 2087
+    password: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    sni: NODe-562276409-282E2e.TraNSfEr34.WORkeRs.DEV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiWHRFQXpEQzlBIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMzQuMTM2LjExMi4xMDQiLCIyMy45NS41Ni4xOTUiLCIzLjg2Ljg1LjY4IiwiMTkyLjMuMTU1LjIxNyJdfQ==?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    udp: true
+  - name: "💦 8 - Trojan - IPv4 : 2087"
+    type: trojan
+    server: 172.67.164.235
+    port: 2087
+    password: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    sni: nODE-562276409-282E2E.trAnsFer34.worKerS.dEv
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiRk9sYTc0Q1liRlRBVSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjM0LjEzNi4xMTIuMTA0IiwiMjMuOTUuNTYuMTk1IiwiMy44Ni44NS42OCIsIjE5Mi4zLjE1NS4yMTciXX0=?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    udp: true
+  - name: "💦 9 - Trojan - IPv4 : 2087"
+    type: trojan
+    server: 104.21.57.166
+    port: 2087
+    password: 15d08a51-e782-4e8b-83e4-c6c400764d45
+    sni: nODe-562276409-282E2e.trANSFeR34.woRKERs.dEV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoibXN0RXk5QzFrbWYiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNC4xMzYuMTEyLjEwNCIsIjIzLjk1LjU2LjE5NSIsIjMuODYuODUuNjgiLCIxOTIuMy4xNTUuMjE3Il19?ed=2560
+      headers:
+        Host: node-562276409-282e2e.transfer34.workers.dev
+    udp: true
+  - name: 💦 1 - VLESS - Upstream Proxy_2
+    type: vless
+    server: 127.0.0.1
+    port: 40443
+    uuid: e25c5905-6882-4375-b6e1-807c8100c741
+    network: ws
+    servername: Node-562276409-e129a8.NEWpLAN7425.worKerS.DEv
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiZFNSYU9idXFSTGd2TDIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNS4yMzkuMTc0LjEwMSIsIjIzLjk0LjEwMy4xOTQiLCIxOC4yMTYuNTUuMTAwIl19?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 2 - VLESS - Domain : 443_2"
+    type: vless
+    server: node-562276409-e129a8.newplan7425.workers.dev
+    port: 443
+    uuid: e25c5905-6882-4375-b6e1-807c8100c741
+    network: ws
+    servername: nOdE-562276409-E129a8.NeWPlAn7425.woRkErS.Dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiekJ2Smc1dWoiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNS4yMzkuMTc0LjEwMSIsIjIzLjk0LjEwMy4xOTQiLCIxOC4yMTYuNTUuMTAwIl19?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 3 - VLESS - Domain : 443_2"
+    type: vless
+    server: www.speedtest.net
+    port: 443
+    uuid: e25c5905-6882-4375-b6e1-807c8100c741
+    network: ws
+    servername: NOde-562276409-E129A8.NewPLAn7425.woRkERs.Dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoieW9OQVpCQk5DMEMiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNS4yMzkuMTc0LjEwMSIsIjIzLjk0LjEwMy4xOTQiLCIxOC4yMTYuNTUuMTAwIl19?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 4 - VLESS - IPv4 : 443_2"
+    type: vless
+    server: 104.21.62.161
+    port: 443
+    uuid: e25c5905-6882-4375-b6e1-807c8100c741
+    network: ws
+    servername: nOde-562276409-e129a8.NeWPLan7425.workeRs.DeV
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoieDJHTE1qSHMiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNS4yMzkuMTc0LjEwMSIsIjIzLjk0LjEwMy4xOTQiLCIxOC4yMTYuNTUuMTAwIl19?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 5 - VLESS - IPv4 : 443_2"
+    type: vless
+    server: 172.67.137.21
+    port: 443
+    uuid: e25c5905-6882-4375-b6e1-807c8100c741
+    network: ws
+    servername: NOdE-562276409-E129A8.nEWplAN7425.WOrKeRs.DeV
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoicXJUNHJHbnFzcmxXIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMzUuMjM5LjE3NC4xMDEiLCIyMy45NC4xMDMuMTk0IiwiMTguMjE2LjU1LjEwMCJdfQ==?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 6 - VLESS - Domain : 2096"
+    type: vless
+    server: node-562276409-e129a8.newplan7425.workers.dev
+    port: 2096
+    uuid: e25c5905-6882-4375-b6e1-807c8100c741
+    network: ws
+    servername: NoDe-562276409-e129a8.nEWPlAn7425.WorKERs.dEv
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiV2h5STkxcjFUbSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjM1LjIzOS4xNzQuMTAxIiwiMjMuOTQuMTAzLjE5NCIsIjE4LjIxNi41NS4xMDAiXX0=?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 7 - VLESS - Domain : 2096"
+    type: vless
+    server: www.speedtest.net
+    port: 2096
+    uuid: e25c5905-6882-4375-b6e1-807c8100c741
+    network: ws
+    servername: NOdE-562276409-e129a8.NewPLAn7425.WorKErS.DEV
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiVTRkUjdZU1pkZmQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNS4yMzkuMTc0LjEwMSIsIjIzLjk0LjEwMy4xOTQiLCIxOC4yMTYuNTUuMTAwIl19?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 8 - VLESS - IPv4 : 2096"
+    type: vless
+    server: 104.21.62.161
+    port: 2096
+    uuid: e25c5905-6882-4375-b6e1-807c8100c741
+    network: ws
+    servername: noDE-562276409-e129A8.NEwPlAN7425.wORkErs.dEv
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiY29nNnBaUTg2OVhvIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMzUuMjM5LjE3NC4xMDEiLCIyMy45NC4xMDMuMTk0IiwiMTguMjE2LjU1LjEwMCJdfQ==?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "💦 9 - VLESS - IPv4 : 2096"
+    type: vless
+    server: 172.67.137.21
+    port: 2096
+    uuid: e25c5905-6882-4375-b6e1-807c8100c741
+    network: ws
+    servername: NODe-562276409-e129A8.newplaN7425.WOrkErS.dEv
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoianlKRW5haThqa2kiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNS4yMzkuMTc0LjEwMSIsIjIzLjk0LjEwMy4xOTQiLCIxOC4yMTYuNTUuMTAwIl19?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 💦 1 - Trojan - Upstream Proxy_2
+    type: trojan
+    server: 127.0.0.1
+    port: 40443
+    password: e25c5905-6882-4375-b6e1-807c8100c741
+    sni: Node-562276409-e129a8.NEWpLAN7425.worKerS.DEv
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiYmxGa1hsQkd3TFk4Z1FjOCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjM1LjIzOS4xNzQuMTAxIiwiMjMuOTQuMTAzLjE5NCIsIjE4LjIxNi41NS4xMDAiXX0=?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    udp: true
+  - name: "💦 2 - Trojan - Domain : 443_2"
+    type: trojan
+    server: node-562276409-e129a8.newplan7425.workers.dev
+    port: 443
+    password: e25c5905-6882-4375-b6e1-807c8100c741
+    sni: nOdE-562276409-E129a8.NeWPlAn7425.woRkErS.Dev
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiWmwyZkNaZUMyZXFQIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMzUuMjM5LjE3NC4xMDEiLCIyMy45NC4xMDMuMTk0IiwiMTguMjE2LjU1LjEwMCJdfQ==?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    udp: true
+  - name: "💦 3 - Trojan - Domain : 443_2"
+    type: trojan
+    server: www.speedtest.net
+    port: 443
+    password: e25c5905-6882-4375-b6e1-807c8100c741
+    sni: NOde-562276409-E129A8.NewPLAn7425.woRkERs.Dev
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiWnY4RHhpWUpjcWlvZ2YiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNS4yMzkuMTc0LjEwMSIsIjIzLjk0LjEwMy4xOTQiLCIxOC4yMTYuNTUuMTAwIl19?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    udp: true
+  - name: "💦 4 - Trojan - IPv4 : 443_2"
+    type: trojan
+    server: 104.21.62.161
+    port: 443
+    password: e25c5905-6882-4375-b6e1-807c8100c741
+    sni: nOde-562276409-e129a8.NeWPLan7425.workeRs.DeV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiWlJ2WDlJenciLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNS4yMzkuMTc0LjEwMSIsIjIzLjk0LjEwMy4xOTQiLCIxOC4yMTYuNTUuMTAwIl19?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    udp: true
+  - name: "💦 5 - Trojan - IPv4 : 443_2"
+    type: trojan
+    server: 172.67.137.21
+    port: 443
+    password: e25c5905-6882-4375-b6e1-807c8100c741
+    sni: NOdE-562276409-E129A8.nEWplAN7425.WOrKeRs.DeV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiemF1R2ZkMGNSVmo3UnQiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNS4yMzkuMTc0LjEwMSIsIjIzLjk0LjEwMy4xOTQiLCIxOC4yMTYuNTUuMTAwIl19?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    udp: true
+  - name: "💦 6 - Trojan - Domain : 2096"
+    type: trojan
+    server: node-562276409-e129a8.newplan7425.workers.dev
+    port: 2096
+    password: e25c5905-6882-4375-b6e1-807c8100c741
+    sni: NoDe-562276409-e129a8.nEWPlAn7425.WorKERs.dEv
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiNExrQk4wMUQxOGgzbSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjM1LjIzOS4xNzQuMTAxIiwiMjMuOTQuMTAzLjE5NCIsIjE4LjIxNi41NS4xMDAiXX0=?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    udp: true
+  - name: "💦 7 - Trojan - Domain : 2096"
+    type: trojan
+    server: www.speedtest.net
+    port: 2096
+    password: e25c5905-6882-4375-b6e1-807c8100c741
+    sni: NOdE-562276409-e129a8.NewPLAn7425.WorKErS.DEV
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiOVpUOVE1bVhkMVBzUm9hIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMzUuMjM5LjE3NC4xMDEiLCIyMy45NC4xMDMuMTk0IiwiMTguMjE2LjU1LjEwMCJdfQ==?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    udp: true
+  - name: "💦 8 - Trojan - IPv4 : 2096"
+    type: trojan
+    server: 104.21.62.161
+    port: 2096
+    password: e25c5905-6882-4375-b6e1-807c8100c741
+    sni: noDE-562276409-e129A8.NEwPlAN7425.wORkErs.dEv
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiRXRtSnJTdEtCNUVSdE4iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIzNS4yMzkuMTc0LjEwMSIsIjIzLjk0LjEwMy4xOTQiLCIxOC4yMTYuNTUuMTAwIl19?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    udp: true
+  - name: "💦 9 - Trojan - IPv4 : 2096"
+    type: trojan
+    server: 172.67.137.21
+    port: 2096
+    password: e25c5905-6882-4375-b6e1-807c8100c741
+    sni: NODe-562276409-e129A8.newplaN7425.WOrkErS.dEv
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /eyJqdW5rIjoiNHdHUmxrQ3hrZiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjM1LjIzOS4xNzQuMTAxIiwiMjMuOTQuMTAzLjE5NCIsIjE4LjIxNi41NS4xMDAiXX0=?ed=2560
+      headers:
+        Host: node-562276409-e129a8.newplan7425.workers.dev
+    udp: true
+  - name: This service is FREE - Nova Proxy Team
+    type: vless
+    server: node-562276409-5a4a8d.suevpnx.workers.dev
+    port: 443
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-se5qie
+    type: vless
+    server: 91.193.59.50
+    port: 2053
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-vp6y1i
+    type: vless
+    server: 104.17.147.16
+    port: 8443
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-xodag6
+    type: vless
+    server: 104.19.34.227
+    port: 8443
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-3f3mw3
+    type: vless
+    server: 104.18.33.37
+    port: 2096
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-bvli33
+    type: vless
+    server: 188.164.248.192
+    port: 2087
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-aocthm
+    type: vless
+    server: 91.193.59.93
+    port: 2087
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-gc7pwu
+    type: vless
+    server: 8.35.211.176
+    port: 8443
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-5hu24v
+    type: vless
+    server: 104.18.33.79
+    port: 2083
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-nc1rjs
+    type: vless
+    server: 104.17.118.60
+    port: 2053
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-bezbkr
+    type: vless
+    server: 8.35.211.155
+    port: 443
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-46an5i
+    type: vless
+    server: 172.66.0.107
+    port: 2087
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-xlugme
+    type: vless
+    server: 108.162.198.56
+    port: 443
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-fhtrlv
+    type: vless
+    server: 198.41.223.70
+    port: 8443
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-b828xi
+    type: vless
+    server: 198.41.223.143
+    port: 2087
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-gkk2gl
+    type: vless
+    server: 172.67.67.198
+    port: 2053
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 Nova-9rxjeo
+    type: vless
+    server: 198.41.209.53
+    port: 2053
+    uuid: 96fce337-5bbb-4d7a-8c98-c333217cced6
+    network: ws
+    servername: node-562276409-5a4a8d.suevpnx.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=4.236.130.132
+      headers:
+        Host: node-562276409-5a4a8d.suevpnx.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: This service is FREE - Nova Proxy Team_1
+    type: vless
+    server: node-562276409-27cabd.subject88.workers.dev
+    port: 443
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-86cb17
+    type: vless
+    server: 104.17.163.179
+    port: 8443
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-vsot5c
+    type: vless
+    server: 108.162.198.108
+    port: 2087
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-h5rbzc
+    type: vless
+    server: 173.245.59.73
+    port: 2096
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-rhdhb9
+    type: vless
+    server: 104.16.149.30
+    port: 2087
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-8w8miu
+    type: vless
+    server: 198.41.208.130
+    port: 8443
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-iwgnxj
+    type: vless
+    server: 8.35.211.126
+    port: 2053
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-hzodfd
+    type: vless
+    server: 104.17.179.122
+    port: 2083
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-s7nzye
+    type: vless
+    server: 8.39.125.232
+    port: 443
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-wta3n7
+    type: vless
+    server: 162.159.37.93
+    port: 2087
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-b0ehlz
+    type: vless
+    server: 104.17.21.227
+    port: 2096
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-k5jdfj
+    type: vless
+    server: 104.17.182.220
+    port: 2083
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-sdrjuf
+    type: vless
+    server: 172.67.75.209
+    port: 2053
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-x840gx
+    type: vless
+    server: 188.164.248.12
+    port: 8443
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-d294t0
+    type: vless
+    server: 104.18.33.62
+    port: 8443
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-h9zzxa
+    type: vless
+    server: 104.17.223.164
+    port: 443
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 Nova-t75sbi
+    type: vless
+    server: 104.17.176.255
+    port: 443
+    uuid: fbd28794-7f00-47a9-baa2-0252a9388c30
+    network: ws
+    servername: node-562276409-27cabd.subject88.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=159.60.146.82
+      headers:
+        Host: node-562276409-27cabd.subject88.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "📊 Used: 0.00 GB / Unlimited GB"
+    type: trojan
+    server: 127.0.0.1
+    port: 1080
+    password: 00000000-0000-0000-0000-000000000000
+    skip-cert-verify: true
+    tls: false
+    udp: true
+  - name: "📅 Expiry: Never Expire (Never Expire)"
+    type: trojan
+    server: 127.0.0.1
+    port: 1080
+    password: 00000000-0000-0000-0000-000000000000
+    skip-cert-verify: true
+    tls: false
+    udp: true
+  - name: V-Core-443
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 443
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a00000000
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2053
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 2053
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a00000001
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2083
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 2083
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a00000002
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2087
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 2087
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a00000003
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2096
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 2096
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a00000004
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-8443
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 8443
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a00000005
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-80
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 80
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a00000006
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-8080
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 8080
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a00000007
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-8880
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 8880
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a00000008
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2052
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 2052
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a00000009
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2082
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 2082
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a0000000a
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2086
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 2086
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a0000000b
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2095
+    type: vless
+    server: node-562276409-70c1a5.existing1.workers.dev
+    port: 2095
+    uuid: ebf6ce73-e7f5-4c60-a931-0f7a0000000c
+    network: ws
+    servername: node-562276409-70c1a5.existing1.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /iPsycho
+      headers:
+        Host: node-562276409-70c1a5.existing1.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: "📊 Used: 0.00 GB / Unlimited GB_1"
+    type: trojan
+    server: 127.0.0.1
+    port: 1080
+    password: 00000000-0000-0000-0000-000000000000
+    skip-cert-verify: true
+    tls: false
+    udp: true
+  - name: "📅 Expiry: Never Expire (Never Expire)_1"
+    type: trojan
+    server: 127.0.0.1
+    port: 1080
+    password: 00000000-0000-0000-0000-000000000000
+    skip-cert-verify: true
+    tls: false
+    udp: true
+  - name: V-Core-443_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 443
+    uuid: d0152fb9-a78c-4ef5-8483-732100000000
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2053_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 2053
+    uuid: d0152fb9-a78c-4ef5-8483-732100000001
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2083_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 2083
+    uuid: d0152fb9-a78c-4ef5-8483-732100000002
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2087_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 2087
+    uuid: d0152fb9-a78c-4ef5-8483-732100000003
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2096_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 2096
+    uuid: d0152fb9-a78c-4ef5-8483-732100000004
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-8443_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 8443
+    uuid: d0152fb9-a78c-4ef5-8483-732100000005
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-80_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 80
+    uuid: d0152fb9-a78c-4ef5-8483-732100000006
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-8080_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 8080
+    uuid: d0152fb9-a78c-4ef5-8483-732100000007
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-8880_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 8880
+    uuid: d0152fb9-a78c-4ef5-8483-732100000008
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2052_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 2052
+    uuid: d0152fb9-a78c-4ef5-8483-732100000009
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2082_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 2082
+    uuid: d0152fb9-a78c-4ef5-8483-73210000000a
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2086_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 2086
+    uuid: d0152fb9-a78c-4ef5-8483-73210000000b
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: V-Core-2095_1
+    type: vless
+    server: node-562276409-eff757.newfilm78.workers.dev
+    port: 2095
+    uuid: d0152fb9-a78c-4ef5-8483-73210000000c
+    network: ws
+    servername: node-562276409-eff757.newfilm78.workers.dev
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /sync
+      headers:
+        Host: node-562276409-eff757.newfilm78.workers.dev
+    skip-cert-verify: true
+    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -159,7 +1773,116 @@ proxy-groups:
       - "💦 6 - VLESS - Domain : 2053"
       - "💦 7 - VLESS - Domain : 2053"
       - "💦 8 - VLESS - IPv4 : 2053"
-      - 172.67.200.134
+      - "💦 9 - VLESS - IPv4 : 2053"
+      - 💦 1 - Trojan - Upstream Proxy
+      - "💦 2 - Trojan - Domain : 443"
+      - "💦 3 - Trojan - Domain : 443"
+      - "💦 4 - Trojan - IPv4 : 443"
+      - "💦 5 - Trojan - IPv4 : 443"
+      - "💦 6 - Trojan - Domain : 2053"
+      - "💦 7 - Trojan - Domain : 2053"
+      - "💦 8 - Trojan - IPv4 : 2053"
+      - "💦 9 - Trojan - IPv4 : 2053"
+      - 💦 1 - VLESS - Upstream Proxy_1
+      - "💦 2 - VLESS - Domain : 443_1"
+      - "💦 3 - VLESS - Domain : 443_1"
+      - "💦 4 - VLESS - IPv4 : 443_1"
+      - "💦 5 - VLESS - IPv4 : 443_1"
+      - "💦 6 - VLESS - Domain : 2087"
+      - "💦 7 - VLESS - Domain : 2087"
+      - "💦 8 - VLESS - IPv4 : 2087"
+      - "💦 9 - VLESS - IPv4 : 2087"
+      - 💦 1 - Trojan - Upstream Proxy_1
+      - "💦 2 - Trojan - Domain : 443_1"
+      - "💦 3 - Trojan - Domain : 443_1"
+      - "💦 4 - Trojan - IPv4 : 443_1"
+      - "💦 5 - Trojan - IPv4 : 443_1"
+      - "💦 6 - Trojan - Domain : 2087"
+      - "💦 7 - Trojan - Domain : 2087"
+      - "💦 8 - Trojan - IPv4 : 2087"
+      - "💦 9 - Trojan - IPv4 : 2087"
+      - 💦 1 - VLESS - Upstream Proxy_2
+      - "💦 2 - VLESS - Domain : 443_2"
+      - "💦 3 - VLESS - Domain : 443_2"
+      - "💦 4 - VLESS - IPv4 : 443_2"
+      - "💦 5 - VLESS - IPv4 : 443_2"
+      - "💦 6 - VLESS - Domain : 2096"
+      - "💦 7 - VLESS - Domain : 2096"
+      - "💦 8 - VLESS - IPv4 : 2096"
+      - "💦 9 - VLESS - IPv4 : 2096"
+      - 💦 1 - Trojan - Upstream Proxy_2
+      - "💦 2 - Trojan - Domain : 443_2"
+      - "💦 3 - Trojan - Domain : 443_2"
+      - "💦 4 - Trojan - IPv4 : 443_2"
+      - "💦 5 - Trojan - IPv4 : 443_2"
+      - "💦 6 - Trojan - Domain : 2096"
+      - "💦 7 - Trojan - Domain : 2096"
+      - "💦 8 - Trojan - IPv4 : 2096"
+      - "💦 9 - Trojan - IPv4 : 2096"
+      - This service is FREE - Nova Proxy Team
+      - 🇩🇪 Nova-se5qie
+      - 🇩🇪 Nova-vp6y1i
+      - 🇩🇪 Nova-xodag6
+      - 🇩🇪 Nova-3f3mw3
+      - 🇩🇪 Nova-bvli33
+      - 🇩🇪 Nova-aocthm
+      - 🇩🇪 Nova-gc7pwu
+      - 🇩🇪 Nova-5hu24v
+      - 🇩🇪 Nova-nc1rjs
+      - 🇩🇪 Nova-bezbkr
+      - 🇩🇪 Nova-46an5i
+      - 🇩🇪 Nova-xlugme
+      - 🇩🇪 Nova-fhtrlv
+      - 🇩🇪 Nova-b828xi
+      - 🇩🇪 Nova-gkk2gl
+      - 🇩🇪 Nova-9rxjeo
+      - This service is FREE - Nova Proxy Team_1
+      - 🇸🇪 Nova-86cb17
+      - 🇸🇪 Nova-vsot5c
+      - 🇸🇪 Nova-h5rbzc
+      - 🇸🇪 Nova-rhdhb9
+      - 🇸🇪 Nova-8w8miu
+      - 🇸🇪 Nova-iwgnxj
+      - 🇸🇪 Nova-hzodfd
+      - 🇸🇪 Nova-s7nzye
+      - 🇸🇪 Nova-wta3n7
+      - 🇸🇪 Nova-b0ehlz
+      - 🇸🇪 Nova-k5jdfj
+      - 🇸🇪 Nova-sdrjuf
+      - 🇸🇪 Nova-x840gx
+      - 🇸🇪 Nova-d294t0
+      - 🇸🇪 Nova-h9zzxa
+      - 🇸🇪 Nova-t75sbi
+      - "📊 Used: 0.00 GB / Unlimited GB"
+      - "📅 Expiry: Never Expire (Never Expire)"
+      - V-Core-443
+      - V-Core-2053
+      - V-Core-2083
+      - V-Core-2087
+      - V-Core-2096
+      - V-Core-8443
+      - V-Core-80
+      - V-Core-8080
+      - V-Core-8880
+      - V-Core-2052
+      - V-Core-2082
+      - V-Core-2086
+      - V-Core-2095
+      - "📊 Used: 0.00 GB / Unlimited GB_1"
+      - "📅 Expiry: Never Expire (Never Expire)_1"
+      - V-Core-443_1
+      - V-Core-2053_1
+      - V-Core-2083_1
+      - V-Core-2087_1
+      - V-Core-2096_1
+      - V-Core-8443_1
+      - V-Core-80_1
+      - V-Core-8080_1
+      - V-Core-8880_1
+      - V-Core-2052_1
+      - V-Core-2082_1
+      - V-Core-2086_1
+      - V-Core-2095_1
   - name: ♻️ 自动选择
     type: url-test
     proxies:
@@ -171,7 +1894,116 @@ proxy-groups:
       - "💦 6 - VLESS - Domain : 2053"
       - "💦 7 - VLESS - Domain : 2053"
       - "💦 8 - VLESS - IPv4 : 2053"
-      - 172.67.200.134
+      - "💦 9 - VLESS - IPv4 : 2053"
+      - 💦 1 - Trojan - Upstream Proxy
+      - "💦 2 - Trojan - Domain : 443"
+      - "💦 3 - Trojan - Domain : 443"
+      - "💦 4 - Trojan - IPv4 : 443"
+      - "💦 5 - Trojan - IPv4 : 443"
+      - "💦 6 - Trojan - Domain : 2053"
+      - "💦 7 - Trojan - Domain : 2053"
+      - "💦 8 - Trojan - IPv4 : 2053"
+      - "💦 9 - Trojan - IPv4 : 2053"
+      - 💦 1 - VLESS - Upstream Proxy_1
+      - "💦 2 - VLESS - Domain : 443_1"
+      - "💦 3 - VLESS - Domain : 443_1"
+      - "💦 4 - VLESS - IPv4 : 443_1"
+      - "💦 5 - VLESS - IPv4 : 443_1"
+      - "💦 6 - VLESS - Domain : 2087"
+      - "💦 7 - VLESS - Domain : 2087"
+      - "💦 8 - VLESS - IPv4 : 2087"
+      - "💦 9 - VLESS - IPv4 : 2087"
+      - 💦 1 - Trojan - Upstream Proxy_1
+      - "💦 2 - Trojan - Domain : 443_1"
+      - "💦 3 - Trojan - Domain : 443_1"
+      - "💦 4 - Trojan - IPv4 : 443_1"
+      - "💦 5 - Trojan - IPv4 : 443_1"
+      - "💦 6 - Trojan - Domain : 2087"
+      - "💦 7 - Trojan - Domain : 2087"
+      - "💦 8 - Trojan - IPv4 : 2087"
+      - "💦 9 - Trojan - IPv4 : 2087"
+      - 💦 1 - VLESS - Upstream Proxy_2
+      - "💦 2 - VLESS - Domain : 443_2"
+      - "💦 3 - VLESS - Domain : 443_2"
+      - "💦 4 - VLESS - IPv4 : 443_2"
+      - "💦 5 - VLESS - IPv4 : 443_2"
+      - "💦 6 - VLESS - Domain : 2096"
+      - "💦 7 - VLESS - Domain : 2096"
+      - "💦 8 - VLESS - IPv4 : 2096"
+      - "💦 9 - VLESS - IPv4 : 2096"
+      - 💦 1 - Trojan - Upstream Proxy_2
+      - "💦 2 - Trojan - Domain : 443_2"
+      - "💦 3 - Trojan - Domain : 443_2"
+      - "💦 4 - Trojan - IPv4 : 443_2"
+      - "💦 5 - Trojan - IPv4 : 443_2"
+      - "💦 6 - Trojan - Domain : 2096"
+      - "💦 7 - Trojan - Domain : 2096"
+      - "💦 8 - Trojan - IPv4 : 2096"
+      - "💦 9 - Trojan - IPv4 : 2096"
+      - This service is FREE - Nova Proxy Team
+      - 🇩🇪 Nova-se5qie
+      - 🇩🇪 Nova-vp6y1i
+      - 🇩🇪 Nova-xodag6
+      - 🇩🇪 Nova-3f3mw3
+      - 🇩🇪 Nova-bvli33
+      - 🇩🇪 Nova-aocthm
+      - 🇩🇪 Nova-gc7pwu
+      - 🇩🇪 Nova-5hu24v
+      - 🇩🇪 Nova-nc1rjs
+      - 🇩🇪 Nova-bezbkr
+      - 🇩🇪 Nova-46an5i
+      - 🇩🇪 Nova-xlugme
+      - 🇩🇪 Nova-fhtrlv
+      - 🇩🇪 Nova-b828xi
+      - 🇩🇪 Nova-gkk2gl
+      - 🇩🇪 Nova-9rxjeo
+      - This service is FREE - Nova Proxy Team_1
+      - 🇸🇪 Nova-86cb17
+      - 🇸🇪 Nova-vsot5c
+      - 🇸🇪 Nova-h5rbzc
+      - 🇸🇪 Nova-rhdhb9
+      - 🇸🇪 Nova-8w8miu
+      - 🇸🇪 Nova-iwgnxj
+      - 🇸🇪 Nova-hzodfd
+      - 🇸🇪 Nova-s7nzye
+      - 🇸🇪 Nova-wta3n7
+      - 🇸🇪 Nova-b0ehlz
+      - 🇸🇪 Nova-k5jdfj
+      - 🇸🇪 Nova-sdrjuf
+      - 🇸🇪 Nova-x840gx
+      - 🇸🇪 Nova-d294t0
+      - 🇸🇪 Nova-h9zzxa
+      - 🇸🇪 Nova-t75sbi
+      - "📊 Used: 0.00 GB / Unlimited GB"
+      - "📅 Expiry: Never Expire (Never Expire)"
+      - V-Core-443
+      - V-Core-2053
+      - V-Core-2083
+      - V-Core-2087
+      - V-Core-2096
+      - V-Core-8443
+      - V-Core-80
+      - V-Core-8080
+      - V-Core-8880
+      - V-Core-2052
+      - V-Core-2082
+      - V-Core-2086
+      - V-Core-2095
+      - "📊 Used: 0.00 GB / Unlimited GB_1"
+      - "📅 Expiry: Never Expire (Never Expire)_1"
+      - V-Core-443_1
+      - V-Core-2053_1
+      - V-Core-2083_1
+      - V-Core-2087_1
+      - V-Core-2096_1
+      - V-Core-8443_1
+      - V-Core-80_1
+      - V-Core-8080_1
+      - V-Core-8880_1
+      - V-Core-2052_1
+      - V-Core-2082_1
+      - V-Core-2086_1
+      - V-Core-2095_1
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -189,7 +2021,116 @@ proxy-groups:
       - "💦 6 - VLESS - Domain : 2053"
       - "💦 7 - VLESS - Domain : 2053"
       - "💦 8 - VLESS - IPv4 : 2053"
-      - 172.67.200.134
+      - "💦 9 - VLESS - IPv4 : 2053"
+      - 💦 1 - Trojan - Upstream Proxy
+      - "💦 2 - Trojan - Domain : 443"
+      - "💦 3 - Trojan - Domain : 443"
+      - "💦 4 - Trojan - IPv4 : 443"
+      - "💦 5 - Trojan - IPv4 : 443"
+      - "💦 6 - Trojan - Domain : 2053"
+      - "💦 7 - Trojan - Domain : 2053"
+      - "💦 8 - Trojan - IPv4 : 2053"
+      - "💦 9 - Trojan - IPv4 : 2053"
+      - 💦 1 - VLESS - Upstream Proxy_1
+      - "💦 2 - VLESS - Domain : 443_1"
+      - "💦 3 - VLESS - Domain : 443_1"
+      - "💦 4 - VLESS - IPv4 : 443_1"
+      - "💦 5 - VLESS - IPv4 : 443_1"
+      - "💦 6 - VLESS - Domain : 2087"
+      - "💦 7 - VLESS - Domain : 2087"
+      - "💦 8 - VLESS - IPv4 : 2087"
+      - "💦 9 - VLESS - IPv4 : 2087"
+      - 💦 1 - Trojan - Upstream Proxy_1
+      - "💦 2 - Trojan - Domain : 443_1"
+      - "💦 3 - Trojan - Domain : 443_1"
+      - "💦 4 - Trojan - IPv4 : 443_1"
+      - "💦 5 - Trojan - IPv4 : 443_1"
+      - "💦 6 - Trojan - Domain : 2087"
+      - "💦 7 - Trojan - Domain : 2087"
+      - "💦 8 - Trojan - IPv4 : 2087"
+      - "💦 9 - Trojan - IPv4 : 2087"
+      - 💦 1 - VLESS - Upstream Proxy_2
+      - "💦 2 - VLESS - Domain : 443_2"
+      - "💦 3 - VLESS - Domain : 443_2"
+      - "💦 4 - VLESS - IPv4 : 443_2"
+      - "💦 5 - VLESS - IPv4 : 443_2"
+      - "💦 6 - VLESS - Domain : 2096"
+      - "💦 7 - VLESS - Domain : 2096"
+      - "💦 8 - VLESS - IPv4 : 2096"
+      - "💦 9 - VLESS - IPv4 : 2096"
+      - 💦 1 - Trojan - Upstream Proxy_2
+      - "💦 2 - Trojan - Domain : 443_2"
+      - "💦 3 - Trojan - Domain : 443_2"
+      - "💦 4 - Trojan - IPv4 : 443_2"
+      - "💦 5 - Trojan - IPv4 : 443_2"
+      - "💦 6 - Trojan - Domain : 2096"
+      - "💦 7 - Trojan - Domain : 2096"
+      - "💦 8 - Trojan - IPv4 : 2096"
+      - "💦 9 - Trojan - IPv4 : 2096"
+      - This service is FREE - Nova Proxy Team
+      - 🇩🇪 Nova-se5qie
+      - 🇩🇪 Nova-vp6y1i
+      - 🇩🇪 Nova-xodag6
+      - 🇩🇪 Nova-3f3mw3
+      - 🇩🇪 Nova-bvli33
+      - 🇩🇪 Nova-aocthm
+      - 🇩🇪 Nova-gc7pwu
+      - 🇩🇪 Nova-5hu24v
+      - 🇩🇪 Nova-nc1rjs
+      - 🇩🇪 Nova-bezbkr
+      - 🇩🇪 Nova-46an5i
+      - 🇩🇪 Nova-xlugme
+      - 🇩🇪 Nova-fhtrlv
+      - 🇩🇪 Nova-b828xi
+      - 🇩🇪 Nova-gkk2gl
+      - 🇩🇪 Nova-9rxjeo
+      - This service is FREE - Nova Proxy Team_1
+      - 🇸🇪 Nova-86cb17
+      - 🇸🇪 Nova-vsot5c
+      - 🇸🇪 Nova-h5rbzc
+      - 🇸🇪 Nova-rhdhb9
+      - 🇸🇪 Nova-8w8miu
+      - 🇸🇪 Nova-iwgnxj
+      - 🇸🇪 Nova-hzodfd
+      - 🇸🇪 Nova-s7nzye
+      - 🇸🇪 Nova-wta3n7
+      - 🇸🇪 Nova-b0ehlz
+      - 🇸🇪 Nova-k5jdfj
+      - 🇸🇪 Nova-sdrjuf
+      - 🇸🇪 Nova-x840gx
+      - 🇸🇪 Nova-d294t0
+      - 🇸🇪 Nova-h9zzxa
+      - 🇸🇪 Nova-t75sbi
+      - "📊 Used: 0.00 GB / Unlimited GB"
+      - "📅 Expiry: Never Expire (Never Expire)"
+      - V-Core-443
+      - V-Core-2053
+      - V-Core-2083
+      - V-Core-2087
+      - V-Core-2096
+      - V-Core-8443
+      - V-Core-80
+      - V-Core-8080
+      - V-Core-8880
+      - V-Core-2052
+      - V-Core-2082
+      - V-Core-2086
+      - V-Core-2095
+      - "📊 Used: 0.00 GB / Unlimited GB_1"
+      - "📅 Expiry: Never Expire (Never Expire)_1"
+      - V-Core-443_1
+      - V-Core-2053_1
+      - V-Core-2083_1
+      - V-Core-2087_1
+      - V-Core-2096_1
+      - V-Core-8443_1
+      - V-Core-80_1
+      - V-Core-8080_1
+      - V-Core-8880_1
+      - V-Core-2052_1
+      - V-Core-2082_1
+      - V-Core-2086_1
+      - V-Core-2095_1
   - name: 📲 电报信息
     type: select
     proxies:
@@ -203,7 +2144,116 @@ proxy-groups:
       - "💦 6 - VLESS - Domain : 2053"
       - "💦 7 - VLESS - Domain : 2053"
       - "💦 8 - VLESS - IPv4 : 2053"
-      - 172.67.200.134
+      - "💦 9 - VLESS - IPv4 : 2053"
+      - 💦 1 - Trojan - Upstream Proxy
+      - "💦 2 - Trojan - Domain : 443"
+      - "💦 3 - Trojan - Domain : 443"
+      - "💦 4 - Trojan - IPv4 : 443"
+      - "💦 5 - Trojan - IPv4 : 443"
+      - "💦 6 - Trojan - Domain : 2053"
+      - "💦 7 - Trojan - Domain : 2053"
+      - "💦 8 - Trojan - IPv4 : 2053"
+      - "💦 9 - Trojan - IPv4 : 2053"
+      - 💦 1 - VLESS - Upstream Proxy_1
+      - "💦 2 - VLESS - Domain : 443_1"
+      - "💦 3 - VLESS - Domain : 443_1"
+      - "💦 4 - VLESS - IPv4 : 443_1"
+      - "💦 5 - VLESS - IPv4 : 443_1"
+      - "💦 6 - VLESS - Domain : 2087"
+      - "💦 7 - VLESS - Domain : 2087"
+      - "💦 8 - VLESS - IPv4 : 2087"
+      - "💦 9 - VLESS - IPv4 : 2087"
+      - 💦 1 - Trojan - Upstream Proxy_1
+      - "💦 2 - Trojan - Domain : 443_1"
+      - "💦 3 - Trojan - Domain : 443_1"
+      - "💦 4 - Trojan - IPv4 : 443_1"
+      - "💦 5 - Trojan - IPv4 : 443_1"
+      - "💦 6 - Trojan - Domain : 2087"
+      - "💦 7 - Trojan - Domain : 2087"
+      - "💦 8 - Trojan - IPv4 : 2087"
+      - "💦 9 - Trojan - IPv4 : 2087"
+      - 💦 1 - VLESS - Upstream Proxy_2
+      - "💦 2 - VLESS - Domain : 443_2"
+      - "💦 3 - VLESS - Domain : 443_2"
+      - "💦 4 - VLESS - IPv4 : 443_2"
+      - "💦 5 - VLESS - IPv4 : 443_2"
+      - "💦 6 - VLESS - Domain : 2096"
+      - "💦 7 - VLESS - Domain : 2096"
+      - "💦 8 - VLESS - IPv4 : 2096"
+      - "💦 9 - VLESS - IPv4 : 2096"
+      - 💦 1 - Trojan - Upstream Proxy_2
+      - "💦 2 - Trojan - Domain : 443_2"
+      - "💦 3 - Trojan - Domain : 443_2"
+      - "💦 4 - Trojan - IPv4 : 443_2"
+      - "💦 5 - Trojan - IPv4 : 443_2"
+      - "💦 6 - Trojan - Domain : 2096"
+      - "💦 7 - Trojan - Domain : 2096"
+      - "💦 8 - Trojan - IPv4 : 2096"
+      - "💦 9 - Trojan - IPv4 : 2096"
+      - This service is FREE - Nova Proxy Team
+      - 🇩🇪 Nova-se5qie
+      - 🇩🇪 Nova-vp6y1i
+      - 🇩🇪 Nova-xodag6
+      - 🇩🇪 Nova-3f3mw3
+      - 🇩🇪 Nova-bvli33
+      - 🇩🇪 Nova-aocthm
+      - 🇩🇪 Nova-gc7pwu
+      - 🇩🇪 Nova-5hu24v
+      - 🇩🇪 Nova-nc1rjs
+      - 🇩🇪 Nova-bezbkr
+      - 🇩🇪 Nova-46an5i
+      - 🇩🇪 Nova-xlugme
+      - 🇩🇪 Nova-fhtrlv
+      - 🇩🇪 Nova-b828xi
+      - 🇩🇪 Nova-gkk2gl
+      - 🇩🇪 Nova-9rxjeo
+      - This service is FREE - Nova Proxy Team_1
+      - 🇸🇪 Nova-86cb17
+      - 🇸🇪 Nova-vsot5c
+      - 🇸🇪 Nova-h5rbzc
+      - 🇸🇪 Nova-rhdhb9
+      - 🇸🇪 Nova-8w8miu
+      - 🇸🇪 Nova-iwgnxj
+      - 🇸🇪 Nova-hzodfd
+      - 🇸🇪 Nova-s7nzye
+      - 🇸🇪 Nova-wta3n7
+      - 🇸🇪 Nova-b0ehlz
+      - 🇸🇪 Nova-k5jdfj
+      - 🇸🇪 Nova-sdrjuf
+      - 🇸🇪 Nova-x840gx
+      - 🇸🇪 Nova-d294t0
+      - 🇸🇪 Nova-h9zzxa
+      - 🇸🇪 Nova-t75sbi
+      - "📊 Used: 0.00 GB / Unlimited GB"
+      - "📅 Expiry: Never Expire (Never Expire)"
+      - V-Core-443
+      - V-Core-2053
+      - V-Core-2083
+      - V-Core-2087
+      - V-Core-2096
+      - V-Core-8443
+      - V-Core-80
+      - V-Core-8080
+      - V-Core-8880
+      - V-Core-2052
+      - V-Core-2082
+      - V-Core-2086
+      - V-Core-2095
+      - "📊 Used: 0.00 GB / Unlimited GB_1"
+      - "📅 Expiry: Never Expire (Never Expire)_1"
+      - V-Core-443_1
+      - V-Core-2053_1
+      - V-Core-2083_1
+      - V-Core-2087_1
+      - V-Core-2096_1
+      - V-Core-8443_1
+      - V-Core-80_1
+      - V-Core-8080_1
+      - V-Core-8880_1
+      - V-Core-2052_1
+      - V-Core-2082_1
+      - V-Core-2086_1
+      - V-Core-2095_1
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -217,7 +2267,116 @@ proxy-groups:
       - "💦 6 - VLESS - Domain : 2053"
       - "💦 7 - VLESS - Domain : 2053"
       - "💦 8 - VLESS - IPv4 : 2053"
-      - 172.67.200.134
+      - "💦 9 - VLESS - IPv4 : 2053"
+      - 💦 1 - Trojan - Upstream Proxy
+      - "💦 2 - Trojan - Domain : 443"
+      - "💦 3 - Trojan - Domain : 443"
+      - "💦 4 - Trojan - IPv4 : 443"
+      - "💦 5 - Trojan - IPv4 : 443"
+      - "💦 6 - Trojan - Domain : 2053"
+      - "💦 7 - Trojan - Domain : 2053"
+      - "💦 8 - Trojan - IPv4 : 2053"
+      - "💦 9 - Trojan - IPv4 : 2053"
+      - 💦 1 - VLESS - Upstream Proxy_1
+      - "💦 2 - VLESS - Domain : 443_1"
+      - "💦 3 - VLESS - Domain : 443_1"
+      - "💦 4 - VLESS - IPv4 : 443_1"
+      - "💦 5 - VLESS - IPv4 : 443_1"
+      - "💦 6 - VLESS - Domain : 2087"
+      - "💦 7 - VLESS - Domain : 2087"
+      - "💦 8 - VLESS - IPv4 : 2087"
+      - "💦 9 - VLESS - IPv4 : 2087"
+      - 💦 1 - Trojan - Upstream Proxy_1
+      - "💦 2 - Trojan - Domain : 443_1"
+      - "💦 3 - Trojan - Domain : 443_1"
+      - "💦 4 - Trojan - IPv4 : 443_1"
+      - "💦 5 - Trojan - IPv4 : 443_1"
+      - "💦 6 - Trojan - Domain : 2087"
+      - "💦 7 - Trojan - Domain : 2087"
+      - "💦 8 - Trojan - IPv4 : 2087"
+      - "💦 9 - Trojan - IPv4 : 2087"
+      - 💦 1 - VLESS - Upstream Proxy_2
+      - "💦 2 - VLESS - Domain : 443_2"
+      - "💦 3 - VLESS - Domain : 443_2"
+      - "💦 4 - VLESS - IPv4 : 443_2"
+      - "💦 5 - VLESS - IPv4 : 443_2"
+      - "💦 6 - VLESS - Domain : 2096"
+      - "💦 7 - VLESS - Domain : 2096"
+      - "💦 8 - VLESS - IPv4 : 2096"
+      - "💦 9 - VLESS - IPv4 : 2096"
+      - 💦 1 - Trojan - Upstream Proxy_2
+      - "💦 2 - Trojan - Domain : 443_2"
+      - "💦 3 - Trojan - Domain : 443_2"
+      - "💦 4 - Trojan - IPv4 : 443_2"
+      - "💦 5 - Trojan - IPv4 : 443_2"
+      - "💦 6 - Trojan - Domain : 2096"
+      - "💦 7 - Trojan - Domain : 2096"
+      - "💦 8 - Trojan - IPv4 : 2096"
+      - "💦 9 - Trojan - IPv4 : 2096"
+      - This service is FREE - Nova Proxy Team
+      - 🇩🇪 Nova-se5qie
+      - 🇩🇪 Nova-vp6y1i
+      - 🇩🇪 Nova-xodag6
+      - 🇩🇪 Nova-3f3mw3
+      - 🇩🇪 Nova-bvli33
+      - 🇩🇪 Nova-aocthm
+      - 🇩🇪 Nova-gc7pwu
+      - 🇩🇪 Nova-5hu24v
+      - 🇩🇪 Nova-nc1rjs
+      - 🇩🇪 Nova-bezbkr
+      - 🇩🇪 Nova-46an5i
+      - 🇩🇪 Nova-xlugme
+      - 🇩🇪 Nova-fhtrlv
+      - 🇩🇪 Nova-b828xi
+      - 🇩🇪 Nova-gkk2gl
+      - 🇩🇪 Nova-9rxjeo
+      - This service is FREE - Nova Proxy Team_1
+      - 🇸🇪 Nova-86cb17
+      - 🇸🇪 Nova-vsot5c
+      - 🇸🇪 Nova-h5rbzc
+      - 🇸🇪 Nova-rhdhb9
+      - 🇸🇪 Nova-8w8miu
+      - 🇸🇪 Nova-iwgnxj
+      - 🇸🇪 Nova-hzodfd
+      - 🇸🇪 Nova-s7nzye
+      - 🇸🇪 Nova-wta3n7
+      - 🇸🇪 Nova-b0ehlz
+      - 🇸🇪 Nova-k5jdfj
+      - 🇸🇪 Nova-sdrjuf
+      - 🇸🇪 Nova-x840gx
+      - 🇸🇪 Nova-d294t0
+      - 🇸🇪 Nova-h9zzxa
+      - 🇸🇪 Nova-t75sbi
+      - "📊 Used: 0.00 GB / Unlimited GB"
+      - "📅 Expiry: Never Expire (Never Expire)"
+      - V-Core-443
+      - V-Core-2053
+      - V-Core-2083
+      - V-Core-2087
+      - V-Core-2096
+      - V-Core-8443
+      - V-Core-80
+      - V-Core-8080
+      - V-Core-8880
+      - V-Core-2052
+      - V-Core-2082
+      - V-Core-2086
+      - V-Core-2095
+      - "📊 Used: 0.00 GB / Unlimited GB_1"
+      - "📅 Expiry: Never Expire (Never Expire)_1"
+      - V-Core-443_1
+      - V-Core-2053_1
+      - V-Core-2083_1
+      - V-Core-2087_1
+      - V-Core-2096_1
+      - V-Core-8443_1
+      - V-Core-80_1
+      - V-Core-8080_1
+      - V-Core-8880_1
+      - V-Core-2052_1
+      - V-Core-2082_1
+      - V-Core-2086_1
+      - V-Core-2095_1
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -231,7 +2390,116 @@ proxy-groups:
       - "💦 6 - VLESS - Domain : 2053"
       - "💦 7 - VLESS - Domain : 2053"
       - "💦 8 - VLESS - IPv4 : 2053"
-      - 172.67.200.134
+      - "💦 9 - VLESS - IPv4 : 2053"
+      - 💦 1 - Trojan - Upstream Proxy
+      - "💦 2 - Trojan - Domain : 443"
+      - "💦 3 - Trojan - Domain : 443"
+      - "💦 4 - Trojan - IPv4 : 443"
+      - "💦 5 - Trojan - IPv4 : 443"
+      - "💦 6 - Trojan - Domain : 2053"
+      - "💦 7 - Trojan - Domain : 2053"
+      - "💦 8 - Trojan - IPv4 : 2053"
+      - "💦 9 - Trojan - IPv4 : 2053"
+      - 💦 1 - VLESS - Upstream Proxy_1
+      - "💦 2 - VLESS - Domain : 443_1"
+      - "💦 3 - VLESS - Domain : 443_1"
+      - "💦 4 - VLESS - IPv4 : 443_1"
+      - "💦 5 - VLESS - IPv4 : 443_1"
+      - "💦 6 - VLESS - Domain : 2087"
+      - "💦 7 - VLESS - Domain : 2087"
+      - "💦 8 - VLESS - IPv4 : 2087"
+      - "💦 9 - VLESS - IPv4 : 2087"
+      - 💦 1 - Trojan - Upstream Proxy_1
+      - "💦 2 - Trojan - Domain : 443_1"
+      - "💦 3 - Trojan - Domain : 443_1"
+      - "💦 4 - Trojan - IPv4 : 443_1"
+      - "💦 5 - Trojan - IPv4 : 443_1"
+      - "💦 6 - Trojan - Domain : 2087"
+      - "💦 7 - Trojan - Domain : 2087"
+      - "💦 8 - Trojan - IPv4 : 2087"
+      - "💦 9 - Trojan - IPv4 : 2087"
+      - 💦 1 - VLESS - Upstream Proxy_2
+      - "💦 2 - VLESS - Domain : 443_2"
+      - "💦 3 - VLESS - Domain : 443_2"
+      - "💦 4 - VLESS - IPv4 : 443_2"
+      - "💦 5 - VLESS - IPv4 : 443_2"
+      - "💦 6 - VLESS - Domain : 2096"
+      - "💦 7 - VLESS - Domain : 2096"
+      - "💦 8 - VLESS - IPv4 : 2096"
+      - "💦 9 - VLESS - IPv4 : 2096"
+      - 💦 1 - Trojan - Upstream Proxy_2
+      - "💦 2 - Trojan - Domain : 443_2"
+      - "💦 3 - Trojan - Domain : 443_2"
+      - "💦 4 - Trojan - IPv4 : 443_2"
+      - "💦 5 - Trojan - IPv4 : 443_2"
+      - "💦 6 - Trojan - Domain : 2096"
+      - "💦 7 - Trojan - Domain : 2096"
+      - "💦 8 - Trojan - IPv4 : 2096"
+      - "💦 9 - Trojan - IPv4 : 2096"
+      - This service is FREE - Nova Proxy Team
+      - 🇩🇪 Nova-se5qie
+      - 🇩🇪 Nova-vp6y1i
+      - 🇩🇪 Nova-xodag6
+      - 🇩🇪 Nova-3f3mw3
+      - 🇩🇪 Nova-bvli33
+      - 🇩🇪 Nova-aocthm
+      - 🇩🇪 Nova-gc7pwu
+      - 🇩🇪 Nova-5hu24v
+      - 🇩🇪 Nova-nc1rjs
+      - 🇩🇪 Nova-bezbkr
+      - 🇩🇪 Nova-46an5i
+      - 🇩🇪 Nova-xlugme
+      - 🇩🇪 Nova-fhtrlv
+      - 🇩🇪 Nova-b828xi
+      - 🇩🇪 Nova-gkk2gl
+      - 🇩🇪 Nova-9rxjeo
+      - This service is FREE - Nova Proxy Team_1
+      - 🇸🇪 Nova-86cb17
+      - 🇸🇪 Nova-vsot5c
+      - 🇸🇪 Nova-h5rbzc
+      - 🇸🇪 Nova-rhdhb9
+      - 🇸🇪 Nova-8w8miu
+      - 🇸🇪 Nova-iwgnxj
+      - 🇸🇪 Nova-hzodfd
+      - 🇸🇪 Nova-s7nzye
+      - 🇸🇪 Nova-wta3n7
+      - 🇸🇪 Nova-b0ehlz
+      - 🇸🇪 Nova-k5jdfj
+      - 🇸🇪 Nova-sdrjuf
+      - 🇸🇪 Nova-x840gx
+      - 🇸🇪 Nova-d294t0
+      - 🇸🇪 Nova-h9zzxa
+      - 🇸🇪 Nova-t75sbi
+      - "📊 Used: 0.00 GB / Unlimited GB"
+      - "📅 Expiry: Never Expire (Never Expire)"
+      - V-Core-443
+      - V-Core-2053
+      - V-Core-2083
+      - V-Core-2087
+      - V-Core-2096
+      - V-Core-8443
+      - V-Core-80
+      - V-Core-8080
+      - V-Core-8880
+      - V-Core-2052
+      - V-Core-2082
+      - V-Core-2086
+      - V-Core-2095
+      - "📊 Used: 0.00 GB / Unlimited GB_1"
+      - "📅 Expiry: Never Expire (Never Expire)_1"
+      - V-Core-443_1
+      - V-Core-2053_1
+      - V-Core-2083_1
+      - V-Core-2087_1
+      - V-Core-2096_1
+      - V-Core-8443_1
+      - V-Core-80_1
+      - V-Core-8080_1
+      - V-Core-8880_1
+      - V-Core-2052_1
+      - V-Core-2082_1
+      - V-Core-2086_1
+      - V-Core-2095_1
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -267,7 +2535,116 @@ proxy-groups:
       - "💦 6 - VLESS - Domain : 2053"
       - "💦 7 - VLESS - Domain : 2053"
       - "💦 8 - VLESS - IPv4 : 2053"
-      - 172.67.200.134
+      - "💦 9 - VLESS - IPv4 : 2053"
+      - 💦 1 - Trojan - Upstream Proxy
+      - "💦 2 - Trojan - Domain : 443"
+      - "💦 3 - Trojan - Domain : 443"
+      - "💦 4 - Trojan - IPv4 : 443"
+      - "💦 5 - Trojan - IPv4 : 443"
+      - "💦 6 - Trojan - Domain : 2053"
+      - "💦 7 - Trojan - Domain : 2053"
+      - "💦 8 - Trojan - IPv4 : 2053"
+      - "💦 9 - Trojan - IPv4 : 2053"
+      - 💦 1 - VLESS - Upstream Proxy_1
+      - "💦 2 - VLESS - Domain : 443_1"
+      - "💦 3 - VLESS - Domain : 443_1"
+      - "💦 4 - VLESS - IPv4 : 443_1"
+      - "💦 5 - VLESS - IPv4 : 443_1"
+      - "💦 6 - VLESS - Domain : 2087"
+      - "💦 7 - VLESS - Domain : 2087"
+      - "💦 8 - VLESS - IPv4 : 2087"
+      - "💦 9 - VLESS - IPv4 : 2087"
+      - 💦 1 - Trojan - Upstream Proxy_1
+      - "💦 2 - Trojan - Domain : 443_1"
+      - "💦 3 - Trojan - Domain : 443_1"
+      - "💦 4 - Trojan - IPv4 : 443_1"
+      - "💦 5 - Trojan - IPv4 : 443_1"
+      - "💦 6 - Trojan - Domain : 2087"
+      - "💦 7 - Trojan - Domain : 2087"
+      - "💦 8 - Trojan - IPv4 : 2087"
+      - "💦 9 - Trojan - IPv4 : 2087"
+      - 💦 1 - VLESS - Upstream Proxy_2
+      - "💦 2 - VLESS - Domain : 443_2"
+      - "💦 3 - VLESS - Domain : 443_2"
+      - "💦 4 - VLESS - IPv4 : 443_2"
+      - "💦 5 - VLESS - IPv4 : 443_2"
+      - "💦 6 - VLESS - Domain : 2096"
+      - "💦 7 - VLESS - Domain : 2096"
+      - "💦 8 - VLESS - IPv4 : 2096"
+      - "💦 9 - VLESS - IPv4 : 2096"
+      - 💦 1 - Trojan - Upstream Proxy_2
+      - "💦 2 - Trojan - Domain : 443_2"
+      - "💦 3 - Trojan - Domain : 443_2"
+      - "💦 4 - Trojan - IPv4 : 443_2"
+      - "💦 5 - Trojan - IPv4 : 443_2"
+      - "💦 6 - Trojan - Domain : 2096"
+      - "💦 7 - Trojan - Domain : 2096"
+      - "💦 8 - Trojan - IPv4 : 2096"
+      - "💦 9 - Trojan - IPv4 : 2096"
+      - This service is FREE - Nova Proxy Team
+      - 🇩🇪 Nova-se5qie
+      - 🇩🇪 Nova-vp6y1i
+      - 🇩🇪 Nova-xodag6
+      - 🇩🇪 Nova-3f3mw3
+      - 🇩🇪 Nova-bvli33
+      - 🇩🇪 Nova-aocthm
+      - 🇩🇪 Nova-gc7pwu
+      - 🇩🇪 Nova-5hu24v
+      - 🇩🇪 Nova-nc1rjs
+      - 🇩🇪 Nova-bezbkr
+      - 🇩🇪 Nova-46an5i
+      - 🇩🇪 Nova-xlugme
+      - 🇩🇪 Nova-fhtrlv
+      - 🇩🇪 Nova-b828xi
+      - 🇩🇪 Nova-gkk2gl
+      - 🇩🇪 Nova-9rxjeo
+      - This service is FREE - Nova Proxy Team_1
+      - 🇸🇪 Nova-86cb17
+      - 🇸🇪 Nova-vsot5c
+      - 🇸🇪 Nova-h5rbzc
+      - 🇸🇪 Nova-rhdhb9
+      - 🇸🇪 Nova-8w8miu
+      - 🇸🇪 Nova-iwgnxj
+      - 🇸🇪 Nova-hzodfd
+      - 🇸🇪 Nova-s7nzye
+      - 🇸🇪 Nova-wta3n7
+      - 🇸🇪 Nova-b0ehlz
+      - 🇸🇪 Nova-k5jdfj
+      - 🇸🇪 Nova-sdrjuf
+      - 🇸🇪 Nova-x840gx
+      - 🇸🇪 Nova-d294t0
+      - 🇸🇪 Nova-h9zzxa
+      - 🇸🇪 Nova-t75sbi
+      - "📊 Used: 0.00 GB / Unlimited GB"
+      - "📅 Expiry: Never Expire (Never Expire)"
+      - V-Core-443
+      - V-Core-2053
+      - V-Core-2083
+      - V-Core-2087
+      - V-Core-2096
+      - V-Core-8443
+      - V-Core-80
+      - V-Core-8080
+      - V-Core-8880
+      - V-Core-2052
+      - V-Core-2082
+      - V-Core-2086
+      - V-Core-2095
+      - "📊 Used: 0.00 GB / Unlimited GB_1"
+      - "📅 Expiry: Never Expire (Never Expire)_1"
+      - V-Core-443_1
+      - V-Core-2053_1
+      - V-Core-2083_1
+      - V-Core-2087_1
+      - V-Core-2096_1
+      - V-Core-8443_1
+      - V-Core-80_1
+      - V-Core-8080_1
+      - V-Core-8880_1
+      - V-Core-2052_1
+      - V-Core-2082_1
+      - V-Core-2086_1
+      - V-Core-2095_1
 rule-providers:
   LocalAreaNetwork:
     type: http
