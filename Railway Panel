@@ -1,5 +1,5 @@
 PANEL STANNG 
-vless://25c600c4-c738-4a66-b0b2-979c016006d3@web-production-b6a53.up.railway.app:443?path=%2Fws%2F9222a4cc663f061c&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=web-production-b6a53.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=web-production-b6a53.up.railway.app#StanNG-User-TLS
+vless://e0759e5e-f606-4b2a-b775-7fca1ccd5fbe@web-production-d1911.up.railway.app:443?path=%2Fvl-ws&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=web-production-d1911.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=web-production-d1911.up.railway.app#StanNG-%204%20Aban
 PANEL ISSP
 vless://87a5223d-aa16-42ba-a2c6-b57c4496a13a@web1-production-cb12.up.railway.app:443?path=%2Fws-701621bdbb9e6a6f&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=web1-production-cb12.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=web1-production-cb12.up.railway.app#ISSP%20Panel-25%20Mehr
 PANEL LUFFy
